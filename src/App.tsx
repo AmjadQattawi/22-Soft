@@ -1,30 +1,17 @@
 import Header from "./components/Header"
 import Hero from "./components/Hero"
+import OverView from "./components/Overview"
 
 
 function App() {
+
 
   return (
     <>
     <Header/>
     <Hero/>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-  
+    <OverView/>
+
     </>
   )
 }

@@ -1,34 +1,40 @@
-import image from "../assets/image.png";
+import Mockup from "../assets/othter/Mockup.png"
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative bg-[#234974] text-white py-20 px-8 md:px-16 overflow-hidden rounded-2xl"
+      className=" bg-[#234974]/90 text-white py-12 md:py-20 px-6 md:px-12 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6 text-left">
-          <span className="inline-block px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#43923d] bg-[#43923d]/10 border border-[#43923d]/30 rounded-full">
-            ✦ Smart Jewelry Management
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        
+        {/* Text Content col-1*/}
+        <div className="flex flex-col gap-6 ">
+          
+          {/* Badge */}
+          <span className=" w-fit  px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#43923d] bg-[#43923d]/15 border border-[#43923d]/30 rounded-full">
+            ✦ Next-Gen Jewelry ERP & POS
           </span>
 
-          <h1 className="text-4xl    md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+          
+          {/* Headline */}
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white">
             Precision ERP Built for the Gold Industry{" "}
-            <span className="lg:text-5xl text-[#f97316]">22-Gold DX</span>
+            <span className="text-[#f97316]">22-Gold DX</span>
           </h1>
 
-          <p className="text-slate-300 text-base md:text-lg max-w-xl leading-relaxed">
-            Take full control of your gold trade. Seamlessly manage karat
-            weights, real-time inventory, financial operations, and POS billing
-            in a single platform
+          {/* Description */}
+          <p className="text-slate-200 text-base md:text-lg leading-relaxed max-w-xl">
+            A specialized solution engineered for jewelry enterprises. Seamlessly manage karat purities, pure weights, making charges, multi-currency gold positions, and instant POS billing across Desktop and Mobile platforms.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          {/* Action Buttons */}
+          <div className="flex items-center gap-4 pt-2">
             <a
               href="#contact"
-              className="bg-[#43923d] hover:bg-[#347430] text-white px-7 py-3.5 rounded-xl font-semibold shadow-lg shadow-green-500/20 transition-all"
+              className="bg-[#43923d] hover:bg-[#347430] text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-green-950/30 transition-all"
             >
-              Contact Us
+              Request a Demo
             </a>
             <a
               href="#features"
@@ -39,15 +45,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative flex justify-center">
-          <div className="relative rounded-2xl overflow-hidden border border-slate-700/60 shadow-2xl shadow-blue-950">
-            <img
-              src={image}
-              alt="22-Soft ERP Dashboard"
-              className="w-full h-auto object-cover"
-            />
-          </div>
+        {/* Mockup Showcase col-2*/}
+        <div className="relative flex justify-center items-center">
+          <img
+            src={Mockup}
+            alt="22-Gold DX ERP Mockup"
+            className="w-full  max-w-lg lg:max-w-none h-auto object-contain drop-shadow-2xl"
+          />
         </div>
+
       </div>
     </section>
   );
