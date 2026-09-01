@@ -48,7 +48,7 @@ export default function Header() {
           href="#contact"
           className="bg-[#ed7d2c] hover:bg-[#f1a26a] text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-md shadow-green-950/20"
         >
-          Request a Demo  a54c0c
+          Request a Demo
         </a>
       </div>
     </header>

@@ -1,6 +1,6 @@
 export default function MetricsStrip() {
   return (
-    <div className="mt-16 pt-8 border-t border-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+    <div className="mt-16 border-t border-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6  text-left">
       
       {/* مؤشر 1: دقة الأوزان والعيارات */}
       <div className="flex flex-col border-l-2 border-[#f97316]/40 pl-4 space-y-0.5">

@@ -5,17 +5,18 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 60 }}
-      animate={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+      // initial={{ opacity: 0, y: 60 }}
+      // animate={{ opacity: 1, y: 0 }} 
+      // transition={{ duration: 1.8, ease: [0.25, 0.1, 0.25, 1] }}
       id="home"
-      className=" bg-white text-black py-12 md:py-15 px-6 md:px-12 overflow-hidden"
+      className=" bg-white text-black py-12 md:py-15 animate-fade-up px-6 md:px-12 overflow-hidden"
     >
      
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-1 items-center">
         {/* Text Content col-1*/}
-        <div className="flex flex-col gap-6 animate-fade-up">
-          <span className="w-fit px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#f97316] bg-[#f97316]/15 border border-[#f97316]/30 rounded-full">
+        {/* animate-fade-up css  */}
+        <div className="flex flex-col gap-6 ">
+          <span className="w-fit px-3.5 py-1.5 text-xs  font-semibold tracking-wide text-[#f97316] bg-[#f97316]/15 border border-[#f97316]/30 rounded-full">
             ✦ Next-Gen Jewelry ERP & POS
           </span>
 
