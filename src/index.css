@@ -3,3 +3,42 @@
 html {
   scroll-behavior: smooth;
 }
+/* 
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+} */
+
+/* The movement of elements as they rise and appear upon opening */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Button flash movement (Shine Effect) */
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+.animate-shine {
+  animation: shine 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
