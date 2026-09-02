@@ -36,17 +36,17 @@ export default function Overview() {
     // bg for all section
     <motion.section
       id="overview"
-      className="relative bg-slate-50/50 text-black py-20 px-6 md:px-12 "
+      className="relative bg-slate-50/50 text-black px-6 md:px-12 py-8 md:py-14 "
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 2, ease: [0.2, 0.8, 0.2, 1] }}
     >
       {/* width for all section */}
-      <div className="max-w-7xl mx-auto flex flex-col gap-8">
+      <div className="max-w-7xl mx-auto gap-8 lg:gap-12 flex flex-col ">
         {/* Section Title: Introduction to the System */}
         <div className="text-center max-w-3xl mx-auto space-y-7">
-          <span className="inline-block px-3.5 py-1.5 text-xs font-semibold tracking-wide bg-[#f97316]/15 border text-[#f97316] border-[#f97316]/30 rounded-full">
+          <span className="inline-block px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#f97316] bg-[#f97316]/15 border   border-[#f97316]/30 rounded-full">
             ✦ Core System Architecture
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">

@@ -6,38 +6,38 @@ export default function Header() {
       <div className="max-w-full   mx-auto px-6 md:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-1">
-          <img src={logo} alt="22-Soft" className="h-16 w-auto" />
+          <img src={logo} alt="22-Soft" className="h-18 w-auto" />
         </a>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
           <a
             href="#overview"
-            className="text-white hover:bg-[#e26b16] px-3 py-1 rounded-xl font-medium transition-colors"
+            className="text-white hover:text-[#e26b16] hover:bg-[#e26b16]/10 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200"
           >
             Overview
           </a>
           <a
             href="#features"
-            className="text-white hover:bg-[#e26b16] px-3 py-1 rounded-xl font-medium transition-colors"
+            className="text-white hover:text-[#e26b16] hover:bg-[#e26b16]/10 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200"
           >
             Features
           </a>
-          <a
+          {/* <a
             href="#mobile-app"
-            className="text-white hover:bg-[#e26b16] px-3 py-1 rounded-xl font-medium transition-colors"
+            className="text-white hover:text-[#e26b16] hover:bg-[#e26b16]/10 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200"
           >
             Mobile App
-          </a>
+          </a> */}
           <a
             href="#clients"
-            className="text-white hover:bg-[#e26b16] px-3 py-1 rounded-xl font-medium transition-colors"
+            className="text-white hover:text-[#e26b16] hover:bg-[#e26b16]/10 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200"
           >
             Clients
           </a>
           <a
             href="#about"
-            className="text-white hover:bg-[#e26b16] px-3 py-1 rounded-xl font-medium transition-colors"
+            className="text-white hover:text-[#e26b16] hover:bg-[#e26b16]/10 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200"
           >
             About Us
           </a>
@@ -46,8 +46,8 @@ export default function Header() {
         {/* Action Button */}
         <a
           href="#contact"
-          className="bg-[#ed7d2c] hover:bg-[#f1a26a] text-white px-5 py-2.5 rounded-lg font-semibold transition-all shadow-md shadow-green-950/20"
-        >
+          className="bg-[#e26b16] hover:bg-[#f27a24] active:scale-95 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200 shadow-md shadow-[#e26b16]/25 hover:shadow-lg hover:shadow-[#e26b16]/40 "
+           >
           Request a Demo
         </a>
       </div>

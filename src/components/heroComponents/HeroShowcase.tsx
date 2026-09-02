@@ -1,4 +1,4 @@
-import Mockup from "../../assets/other/Mockup.png";
+import Mockup from "../../assets/mockup/Mockup.png";
 
 export default function HeroShowcase() {
   return (
