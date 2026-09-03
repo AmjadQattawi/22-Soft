@@ -2,7 +2,8 @@ import logo from "../assets/company Logo/logo-22-Soft.png";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-[#234974]/90 backdrop-blur-md border-b border-white/10  ">
+    // 
+    <header className="sticky top-0 z-50  bg-[#234974]/90 backdrop-blur-md border-b border-white/10  ">
       <div className="max-w-full   mx-auto px-6 md:px-8 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-1">

@@ -14,7 +14,7 @@ export default function FeatureCard({
   number,
   badge,
   title,
-  description,
+  // description,
   highlights,
   imageSrc,
   imageAlt,
@@ -23,7 +23,7 @@ export default function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div
-      className={`group relative bg-white border border-slate-200/80 hover:${accentColor} rounded-3xl p-2.5 lg:p-3 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-200/60 overflow-hidden`}
+      className={`group relative w-full bg-white border border-slate-200/80 hover:${accentColor} rounded-3xl p-2.5 lg:p-3 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-200/60 overflow-hidden`}
     >
       {/* 1. Top section: Number, badge, and titles */}
       <div className="space-y-2">
@@ -68,7 +68,7 @@ export default function FeatureCard({
             src={imageSrc}
             alt={imageAlt}
             // هون
-            className={`w-[30vw] h-40 md:h-48 transition-transform duration-700 group-hover:scale-105 ${
+            className={`w-full h-40 md:h-48 transition-transform duration-700 group-hover:scale-105 ${
               number === "01" ? "object-contain p-1" : "object-cover object-top"
             }`}
           />

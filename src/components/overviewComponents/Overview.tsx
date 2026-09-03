@@ -36,7 +36,7 @@ export default function Overview() {
     // bg for all section
     <motion.section
       id="overview"
-      className="relative bg-slate-50/50 text-black px-6 md:px-12 py-8 md:py-14 "
+      className="relative bg-slate-100/70 text-black px-6 md:px-12 py-4 lg:py-6 "
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}

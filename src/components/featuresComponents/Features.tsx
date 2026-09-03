@@ -78,7 +78,7 @@ export default function Features() {
   return (
     <motion.section
       id="features"
-      className="relative bg-white px-6 md:px-12 py-4 lg:py-6 scroll-mt-20 overflow-hidden"
+      className="relative bg-white px-6 md:px-12 py-4 lg:py-6 overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -101,7 +101,7 @@ export default function Features() {
         </div>
 
         {/*   2x2 grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5">
+        <div className=" max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 ">
           {featuresData.map((feature) => (
             <FeatureCard key={feature.number} {...feature} />
           ))}
