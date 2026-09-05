@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export interface FeatureCardProps {
   number: string;
   badge: string;
@@ -8,6 +10,7 @@ export interface FeatureCardProps {
   imageAlt: string;
   accentColor: string;
   badgeBg: string;
+  index:number;
 }
 
 export default function FeatureCard({
@@ -20,10 +23,21 @@ export default function FeatureCard({
   imageAlt,
   accentColor,
   badgeBg,
+  index
 }: FeatureCardProps) {
   return (
-    <div
-      className={`group relative w-full bg-white border border-slate-200/80 hover:${accentColor} rounded-3xl p-2.5 lg:p-3 flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-200/60 overflow-hidden`}
+    <motion.div
+      className={`group relative w-full bg-white border border-slate-200/80 hover:${accentColor} rounded-3xl p-2.5 lg:p-3 flex flex-col justify-between  hover:shadow-2xl hover:shadow-slate-200/60 overflow-hidden`}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 25,
+        mass: 0.8,
+        delay: index * 0.2,
+      }}    
     >
       {/* 1. Top section: Number, badge, and titles */}
       <div className="space-y-2">
@@ -77,6 +91,6 @@ export default function FeatureCard({
           <div className="absolute inset-0 bg-linear-to-t from-slate-900/10 via-transparent to-transparent pointer-events-none" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -27,7 +27,7 @@ export default function ClientsSlider(){
           <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-linear-to-l from-white to-transparent" />
          
           <motion.div
-            className="flex w-max items-center gap-8"
+            className="flex w-max items-center gap-8 "
             animate={{ x: ["0%", "-25%"] }}
             transition={{
               ease: "linear",
@@ -38,7 +38,7 @@ export default function ClientsSlider(){
             {marqueeList.map((client, index) => (
               <div
                 key={index}
-                className=" relative w-36 h-24 md:w-50 md:h-50 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-[0_0_40px_rgba(0,0,0,0.18)]   transition-all duration-300 flex items-center justify-center p-4 shrink-0 hover:scale-110 cursor-pointer"
+                className=" relative w-36 h-24 md:w-40 md:h-40 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-[0_0_40px_rgba(0,0,0,0.18)]   transition-all duration-300 flex items-center justify-center p-4 shrink-0 hover:scale-110 cursor-pointer"
               >
                 <img
                   src={client.logo}

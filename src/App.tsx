@@ -1,8 +1,9 @@
-import AboutUs from "./components/AboutUs";
-import AboutUsss from "./components/AboutUsss";
+import AboutUs from "./components/aooutUs/AboutUs";
 import Clients from "./components/clients/Clients";
+import ContactUs from "./components/contactUsComponents/ContactUs";
 import Features from "./components/featuresComponents/Features";
-import Header from "./components/Header";
+import Footer from "./components/footerComponents/Footer"
+import Header from "./components/header/Header";
 import Hero from "./components/heroComponents/Hero";
 import MobileApp from "./components/mobileApp/MobileApp";
 import Overview from "./components/overviewComponents/Overview";
@@ -17,13 +18,8 @@ function App() {
       <MobileApp />
       <Clients />
       <AboutUs />
-
-      <hr />
-      <hr />
-      <hr />
-      <hr />
-
-      <AboutUsss />
+      <ContactUs/>
+      <Footer />
     </>
   );
 }

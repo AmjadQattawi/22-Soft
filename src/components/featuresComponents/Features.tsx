@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import FeatureCard, { type FeatureCardProps } from "./FeatureCard"
 
 // استيراد الصور التي جهزتها
 import posBillingImg from "../../assets/features/pos-billing.png";
 import positionChartImg from "../../assets/features/position-chart.png";
 import inventoryPurchaseImg from "../../assets/features/inventory-purchase.png";
 import auditLedgerImg from "../../assets/features/audit-ledger.png";
+import FeatureCard from "./FeatureCard";
+import SectionContainer from "../cssComponents/SectionContainer";
 
-const featuresData: FeatureCardProps[] = [
+const featuresData = [
   {
     number: "01",
     badge: "Fast POS & Invoicing",
@@ -76,38 +77,38 @@ const featuresData: FeatureCardProps[] = [
 
 export default function Features() {
   return (
-    <motion.section
+    <SectionContainer
       id="features"
-      className="relative bg-white px-6 md:px-12 py-4 lg:py-6 overflow-hidden"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
+      className=" bg-slate-100/70"
     >
-      <div className="max-w-7xl mx-auto space-y-4 lg:space-y-6">
-        
         {/* Section header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 2, ease: [0.2, 0.8, 0.2, 1] }}
+          className="text-center max-w-3xl mx-auto space-y-4"
+        >
           <span className="inline-block px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#f97316] bg-[#f97316]/15 border-[#f97316]/30 rounded-full">
             ✦ Operational Modules
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
+          <h2 className="text-3xl md:text-3xl font-extrabold tracking-tight text-slate-900">
             Engineered for Every Corner of Your{" "}
             <span className="text-[#f97316]">Jewelry Business</span>
           </h2>
           <p className="text-slate-600 text-base md:text-lg leading-relaxed">
-            Eliminate operational blind spots. From the retail sales counter to complex bullion settlement ledgers, 22-Gold DX gives you full command over your inventory and cash flows.
+            Eliminate operational blind spots. From the retail sales counter to
+            complex bullion settlement ledgers, 22-Gold DX gives you full
+            command over your inventory and cash flows.
           </p>
-        </div>
+        </motion.div>
 
         {/*   2x2 grid */}
         <div className=" max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 ">
-          {featuresData.map((feature) => (
-            <FeatureCard key={feature.number} {...feature} />
+          {featuresData.map((feature, index) => (
+            <FeatureCard key={feature.number} {...feature} index={index} />
           ))}
         </div>
-
-      </div>
-    </motion.section>
+    </SectionContainer>
   );
 }

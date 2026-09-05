@@ -31,7 +31,7 @@ export default function MobileCapabilities(){
             ✦ Floor Sales & Mobile Command
           </span>
 
-          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight ">
+          <h2 className="text-3xl md:text-3xl font-extrabold text-slate-900 tracking-tight ">
             Empower Your Team on the{" "}
             <span className="text-[#f97316]">Showroom Floor</span>
           </h2>

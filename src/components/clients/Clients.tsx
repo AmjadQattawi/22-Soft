@@ -1,22 +1,21 @@
+import SectionContainer from "../cssComponents/SectionContainer";
 import ClientsSlider from "./ClientsSlider";
 
 
 export default function Clients() {
 
   return (
-    <section
+    <SectionContainer
       id="clients"
-      className="relative  bg-white px-6 md:px-12 py-4 lg:py-6 overflow-hidden "
+      className=" bg-slate-100/25 py-4 lg:pt-10 lg:pb-25"
     >
-      {/* All */}
-      <div className="max-w-7xl mx-auto space-y-4 lg:space-y-6">
-        
+
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="inline-block px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#f97316] bg-[#f97316]/15 border-[#f97316]/30 rounded-full">
             ✦ Trusted Partnerships
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
+          <h2 className="text-3xl md:text-3xl font-extrabold tracking-tight text-slate-900">
           Chosen by the Best in the{" "}
             <span className="text-[#f97316]">Jewelry Industry</span>
           </h2>
@@ -29,10 +28,9 @@ export default function Clients() {
 
         {/* show Clients Slider */}
        <ClientsSlider/>
+       
         
-      </div>
 
-      {/* End All */}
-    </section>
+    </SectionContainer>
   );
 }
