@@ -38,6 +38,7 @@ export default function AboutTabs(){
   const [activeTab, setActiveTab] = useState<string>("story");
   const currentTab = tabs.find((t) => t.id === activeTab) || tabs[0];
     return(
+      
         <div className="lg:col-span-7 bg-white p-7 md:p-9 rounded-3xl border border-slate-200/90 shadow-sm flex flex-col justify-between">
             <div>
               {/* Tabs Navigation */}
