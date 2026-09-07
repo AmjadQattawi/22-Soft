@@ -1,54 +1,64 @@
 import aliZaher from "../../assets/Customer logos/ALI Zaher Jewellery.jpg";
 import asmar from "../../assets/Customer logos/Asmar Jewellery.jpeg";
-import eden from "../../assets/Customer logos/EDEN Jewellery.jpg"
+import eden from "../../assets/Customer logos/EDEN Jewellery.jpg";
 import jats from "../../assets/Customer logos/JATS.png";
 import oya from "../../assets/Customer logos/Oya Jewellery.jpg";
 import waddah from "../../assets/Customer logos/Waddah Hreiz Jewellery.jpg";
 import { motion } from "framer-motion";
 
 const clients = [
-  { name: "Ali Zaher Jewelry", logo: aliZaher },
-  { name: "Asmar Jewellery", logo: asmar },
-  { name: "EDEN Jewelry", logo: eden },
-  { name: "JATS", logo: jats },
-  { name: "OYA Jewellery", logo: oya },
-  { name: "Waddah Hreiz Jewelry", logo: waddah },
+  { name: "Ali Zaher Jewelry", logo: aliZaher, country: "JORDAN" },
+  { name: "Asmar Jewellery", logo: asmar, country: "UAE" },
+  { name: "EDEN Jewelry", logo: eden, country: "JORDAN" },
+  { name: "JATS", logo: jats, country: "JORDAN" },
+  { name: "OYA Jewellery", logo: oya, country: "IRAQ" },
+  { name: "Waddah Hreiz Jewelry", logo: waddah, country: "JORDAN" },
 ];
 
-export default function ClientsSlider(){
+export default function ClientsSlider() {
   const marqueeList = [...clients, ...clients, ...clients, ...clients];
 
-    return(
+  return (
+    <div className="relative w-full overflow-hidden   ">
+      {/* Left and Right Lateral gradient */}
 
-         <div className="relative w-full overflow-hidden  py-9  ">
-            {/* Left and Right Lateral gradient */}
+      <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-linear-to-r from-white to-transparent" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-linear-to-l from-white to-transparent" />
 
-          <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-linear-to-r from-white to-transparent" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-linear-to-l from-white to-transparent" />
-         
-          <motion.div
-            className="flex w-max items-center gap-8 "
-            animate={{ x: ["0%", "-25%"] }}
-            transition={{
-              ease: "linear",
-              duration: 20,
-              repeat: Infinity,
-            }}
+      <motion.div
+        className="flex w-max items-center gap-8 "
+        animate={{ x: ["0%", "-25%"] }}
+        transition={{
+          ease: "linear",
+          duration: 20,
+          repeat: Infinity,
+        }}
+      >
+        {marqueeList.map((client, index) => (
+          <div
+            key={index}
+            className="relative flex flex-col items-center justify-between w-36 h-32 md:w-44 md:h-40 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-[0_0_30px_rgba(0,0,0,0.12)] transition-all duration-300 p-3 shrink-0 hover:scale-105 cursor-pointer group"
           >
-            {marqueeList.map((client, index) => (
-              <div
-                key={index}
-                className=" relative w-36 h-24 md:w-40 md:h-40 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-[0_0_40px_rgba(0,0,0,0.18)]   transition-all duration-300 flex items-center justify-center p-4 shrink-0 hover:scale-110 cursor-pointer"
-              >
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="max-h-full max-w-full w-auto rounded-xl h-auto object-contain  "
-                />
-              </div>
-            ))}
-          </motion.div>
-        </div>
+            <div className="flex-1 w-full flex items-center justify-center overflow-hidden">
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="max-h-12 md:max-h-16 max-w-full w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
 
-    )
+            <div className="w-full flex flex-col items-center gap-1 pt-1.5 border-t border-slate-100">
+              <span className="text-xs font-bold text-slate-800 group-hover:text-[#f97316] transition-colors text-center truncate max-w-full">
+                {client.name}
+              </span>
+
+              <span className="inline-block px-2 py-0.5 text-[10px] font-medium text-slate-500 bg-slate-100 rounded-md tracking-wide">
+                {client.country}
+              </span>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  );
 }

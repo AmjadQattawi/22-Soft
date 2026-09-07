@@ -1,9 +1,9 @@
 import { useState } from "react";
 import SectionContainer from "../cssComponents/SectionContainer";
-import FeatureHeader from "../featuresComponents/FeatureHeader";
 import { featuresList } from "./featuresData";
 import FeatureTabsList from "./FeatureTabsList";
 import FeatureWindowPreview from "./FeatureWindowPreview";
+import FeatureHeader from "./FeatureHeader";
 
 export default function Features() {
   const [activeIdx, setActiveIdx] = useState(0);
