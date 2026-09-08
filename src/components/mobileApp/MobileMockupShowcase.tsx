@@ -40,11 +40,11 @@ export default function MobileMockupShowcase() {
       <div className="absolute w-72 h-72 md:w-96 md:h-96  bg-[#f97316]/10 rounded-full blur-3xl pointer-events-none" />
 
       {/*  3 phones */}
-      <div className="relative flex items-center justify-center w-full max-w-lg lg:max-w-xl animate-float">
+      <div className="relative flex items-center justify-center w-full max-w-lg lg:max-w-xl animate-float ">
         {devices.map((device) => (
           <div
             key={device.id}
-            className={`relative transition-all duration-500 ${device.wrapperClass}`}
+            className={`relative transition-all duration-500  rounded-full  ${device.wrapperClass}`}
           >
             <div className="bg-slate-900 p-2.5 rounded-[2.5rem] border-4 border-slate-800">
               <div className="relative rounded-4xl overflow-hidden bg-white border border-slate-200 aspect-9/19">

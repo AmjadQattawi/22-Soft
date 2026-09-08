@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionContainer from "../cssComponents/SectionContainer";
 import { featuresList } from "./featuresData";
 import FeatureTabsList from "./FeatureTabsList";
@@ -7,9 +7,15 @@ import FeatureHeader from "./FeatureHeader";
 
 export default function Features() {
   const [activeIdx, setActiveIdx] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIdx((prev) => (prev + 1) % featuresList.length);
+    }, 3000); 
 
+    return () => clearInterval(timer); 
+  }, []);
   return (
-    <SectionContainer id="features" className="bg-slate-100/70 ">
+    <SectionContainer id="features" className="bg-slate-100/70  " divclassName="gap-1 lg:gap-2">
       {/* Feature Header  */}
       <FeatureHeader />
 
