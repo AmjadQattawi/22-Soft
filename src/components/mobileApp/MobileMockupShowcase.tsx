@@ -9,21 +9,21 @@ const devices = [
     src: mobilePrimary,
     alt: "22-Gold Mobile Dashboard",
     wrapperClass:
-      "-mr-8 md:-mr-10 z-10 w-36 md:w-44 scale-90 md:scale-95 opacity-85 hover:opacity-100 hover:z-30 hover:scale-105 shadow-xl",
+      "-mr-8 md:-mr-10 z-10 w-44 md:w-52 scale-90 md:scale-95 opacity-85 hover:opacity-100 hover:z-30 hover:scale-105 shadow-xl",
   },
   {
     id: "center",
     src: mobileCatalog,
     alt: "Jewelry Showcase Catalog",
     wrapperClass:
-      "z-20 w-44 md:w-52 shadow-2xl shadow-slate-950/20 hover:scale-105",
+      "z-20 w-44 md:w-60 shadow-2xl shadow-slate-950/20 hover:scale-105",
   },
   {
     id: "right",
     src: mobilePos,
     alt: "Mobile POS Invoicing",
     wrapperClass:
-      "-ml-8 md:-ml-10 z-10 w-36 md:w-44 scale-90 md:scale-95 opacity-85 hover:opacity-100 hover:z-30 hover:scale-105 shadow-xl",
+      "-ml-8 md:-ml-10 z-10 w-44 md:w-52 scale-90 md:scale-95 opacity-85 hover:opacity-100 hover:z-30 hover:scale-105 shadow-xl",
   },
 ];
 

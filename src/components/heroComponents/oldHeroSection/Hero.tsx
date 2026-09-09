@@ -1,4 +1,4 @@
-import SectionContainer from "../cssComponents/SectionContainer";
+import SectionContainer from "../../cssComponents/SectionContainer";
 import HeroShowcase from "./HeroShowcase";
 import { motion } from "framer-motion";
 
@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <SectionContainer
       id="home"
-      className="bg-[#4c8ccd] min-h-[calc(100vh-5rem)] flex items-center justify-center py-0!"
+      className="bg-linear-to-br from-slate-950 via-indigo-950 to-purple-950 min-h-[calc(100vh-5rem)] flex items-center justify-center py-0!"
     >
       {/* grid div */}
       <div className="  grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
@@ -25,7 +25,7 @@ export default function Hero() {
             </span> */}
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-4xl lg:text-4xl font-extrabold leading-tight tracking-tight text-black">
+          <h1 className="text-3xl md:text-4xl lg:text-4xl font-extrabold leading-tight tracking-tight text-white">
             Precision ERP Built for the Gold Industry{" "}
             <span className="text-[#f97316]">22-Gold DX</span>
           </h1>

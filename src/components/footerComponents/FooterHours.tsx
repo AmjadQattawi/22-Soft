@@ -1,10 +1,10 @@
 export default function FooterHours() {
   return (
     <div className="lg:col-span-2 space-y-4">
-      <p className="text-white font-bold text-xs uppercase tracking-wider">
+      <p className="text-white font-bold text-base uppercase tracking-wider">
         Working Hours
       </p>
-      <div className="space-y-2 text-xs text-slate-300 leading-relaxed">
+      <div className="space-y-2 text-sm text-slate-300 leading-relaxed">
         <div>
           <p className="text-white font-semibold">Sunday – Thursday</p>
           <p className="text-slate-300">9:00 AM – 6:00 PM</p>

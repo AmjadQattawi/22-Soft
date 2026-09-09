@@ -24,7 +24,7 @@ export default function OverviewCard({
       className={`group relative bg-white border border-slate-200/80 ${hoverBorder} rounded-2xl p-8 space-y-4  hover:shadow-2xl hover:shadow-slate-200/50 cursor-pointer overflow-hidden`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.55 }}
+      viewport={{ once: true, amount: 0.20 }}
       transition={{
         type: "spring",
         stiffness: 260,

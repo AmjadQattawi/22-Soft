@@ -46,23 +46,41 @@ export default function MobileCapabilities() {
               <h4 className="text-sm font-bold text-slate-900 leading-none">
                 {item.title}
               </h4>
-              <p className="text-xs text-slate-500 mt-1">
-                {item.desc}
-              </p>
+              <p className="text-xs text-slate-500 mt-1">{item.desc}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex items-center gap-2 pt-3 text-xs font-medium text-slate-500">
-        <span className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700">
-          Android
-        </span>
-        <span className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700">
-          iOS
-        </span>
-        <span>• Offline Sync</span>
-      </div>
+<div className="flex flex-wrap items-center gap-2 pt-3 text-xs font-medium text-slate-500">
+  <a
+    href="https://play.google.com/store/apps/details?id=com.soft_22App"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200/80 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shadow-xs"
+  >
+    <svg className="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+    </svg>
+    <span>Download Android</span>
+  </a>
+
+  <a
+    href="https://apps.apple.com/jo/app/22-gold/id6739332966"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200/80 transition-all duration-200 hover:-translate-y-0.5 active:scale-95 shadow-xs"
+  >
+    <svg className="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+    </svg>
+    <span>Download iOS</span>
+  </a>
+
+  <span>• Offline Sync</span>
+</div>
+
+
     </motion.div>
   );
 }
