@@ -8,7 +8,7 @@ export default function FooterContact() {
 <li className="flex items-start gap-2">
   <span className="text-[#f97316] shrink-0 text-sm">📍</span>
 <a
-  href="https://www.google.com/maps/search/?api=1&query=22-Soft,+Ali+Nassouh+At-Taher+St.,+Amman"
+  href="https://maps.app.goo.gl/cFQKUsXYDpEVbujj8"
   target="_blank"
   rel="noopener noreferrer"
   className="hover:text-white transition"

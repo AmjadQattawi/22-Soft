@@ -6,7 +6,7 @@ export default function ClientsSlider() {
   const marqueeList = [...clients, ...clients, ...clients, ...clients];
 
   return (
-    <div className="relative w-full overflow-hidden rounded-4xl   p-5  ">
+    <div className="relative w-full overflow-hidden rounded-4xl  p-5  ">
       {/* Left and Right Lateral gradient */}
 
       <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-10 pointer-events-none bg-linear-to-r from-white to-transparent" />

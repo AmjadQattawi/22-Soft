@@ -46,9 +46,9 @@ export default function ContactUs() {
   return (
     <section
       id="contact"
-      className="relative bg-[#234974]/90 text-white px-6 md:px-12 py-20 lg:py-28 scroll-mt-20 overflow-hidden"
+      className="relative bg-[#102b46] text-white px-6 md:px-12 py-20 lg:py-28 scroll-mt-20 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl min-h-[calc(100vh-30rem)] mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Left side: Prominent title and text*/}
           <ContactInfo />

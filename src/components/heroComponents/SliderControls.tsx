@@ -1,51 +1,60 @@
 interface SliderControlsProps {
   totalSlides: number;
-  currentIndex: number;
-  onPrev: () => void;
+  currentSlide: number;
   onNext: () => void;
+  onPrev: () => void;
   onSelect: (index: number) => void;
 }
 
 export default function SliderControls({
   totalSlides,
-  currentIndex,
-  onPrev,
+  currentSlide,
   onNext,
+  onPrev,
   onSelect,
 }: SliderControlsProps) {
   return (
     <>
-      {/* Side Arrows */}
+      {/* Previous - Left Center */}
       <button
         onClick={onPrev}
-        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3.5 rounded-full bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 backdrop-blur-md transition cursor-pointer"
-        aria-label="Previous slide"
+        className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20
+           w-12 h-12 rounded-full border border-white/60
+           flex  justify-center
+           text-white text-3xl
+           hover:bg-[#f97316]/20 hover:border-[#f97316] hover:text-[#f97316]
+           transition-all duration-200
+           cursor-pointer"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-        </svg>
+        ‹
       </button>
 
+      {/* Next - Right Center */}
       <button
         onClick={onNext}
-        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3.5 rounded-full bg-slate-900/60 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/60 backdrop-blur-md transition cursor-pointer"
-        aria-label="Next slide"
+        className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20
+           w-12 h-12 rounded-full border border-white/60
+           flex  justify-center
+           text-white text-3xl
+           hover:bg-[#f97316]/20 hover:border-[#f97316] hover:text-[#f97316]
+           hover:scale-110
+           transition-all duration-200 cursor-pointer"
+           
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-        </svg>
+        ›
       </button>
 
-      {/* Bottom Dots Indicator */}
-      <div className="absolute bottom-8 flex gap-3">
-        {Array.from({ length: totalSlides }).map((_, i) => (
+      {/* Dots - Bottom Center */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20 ">
+        {Array.from({ length: totalSlides }).map((_, index) => (
           <button
-            key={i}
-            onClick={() => onSelect(i)}
-            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-              currentIndex === i ? "w-10 bg-[#f97316]" : "w-2.5 bg-slate-700 hover:bg-slate-500"
+            key={index}
+            onClick={() => onSelect(index)}
+            className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
+              currentSlide === index
+                ? "w-6 bg-[#f97316]"
+                : "w-2 bg-white/40 hover:bg-white/70"
             }`}
-            aria-label={`Go to slide ${i + 1}`}
           />
         ))}
       </div>

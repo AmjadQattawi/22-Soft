@@ -1,5 +1,5 @@
 import Clients from "./components/clients/Clients";
-import ContactUs from "./components/contactUsComponents/ContactUs";
+import ContactUs from "./components/contactus/ContactUs";
 
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./components/MainLayout";

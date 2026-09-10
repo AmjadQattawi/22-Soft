@@ -67,14 +67,14 @@ export default function AboutTeaser() {
           </div>
         </div>
 
-        {/* شبكة الأعمدة الأربعة */}
+        {/* Four column grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center pt-2">
           {WHY_ITEMS.map((item, index) => (
             <div key={index} className="space-y-3">
               <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-slate-200/70 text-slate-600 text-xl">
                 {item.icon}
               </div>
-              <h3 className="font-bold text-slate-800 text-base">
+              <h3 className="font-bold text-slate-800 text-lg">
                 {item.title}
               </h3>
               <p className="text-slate-500 text-sm sm:text-lg leading-relaxed   mx-auto">
