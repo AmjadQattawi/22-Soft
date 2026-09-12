@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import MainLayout from "./components/MainLayout";
 import HomePage from "./components/HomePage";
 import AboutUs from "./components/aooutUs/AboutUs";
+import GoldDXLandingPage from "./components/landingpage/GoldDXLandingPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="clients" element={<Clients />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
+          <Route path="features" element={<GoldDXLandingPage/>} />
         </Route>
       </Routes>
     </>

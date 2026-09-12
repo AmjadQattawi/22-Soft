@@ -1,4 +1,4 @@
-import SectionContainer from "../csscomponents/SectionContainer";
+import SectionContainer from "../cssComponents/SectionContainer"
 import ClientsMap from "./clientsmap/ClientsMap";
 import ClientsSlider from "./ClientsSlider";
 

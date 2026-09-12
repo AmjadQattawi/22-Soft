@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SectionContainer from "../csscomponents/SectionContainer";
+import SectionContainer from "../cssComponents/SectionContainer";
 import { featuresList } from "./featuresData";
 import FeatureTabsList from "./FeatureTabsList";
 import FeatureWindowPreview from "./FeatureWindowPreview";
