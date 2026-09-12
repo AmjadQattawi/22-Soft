@@ -16,9 +16,9 @@ export default function ContactForm({
   formData,
   setFormData,
 }: ContactFormProps) {
-  const [errorsValidation, setErrorsValidation] = useState<ContactFormErrors>(
-    {},
-  );
+  const [errorsValidation, setErrorsValidation] =
+    useState<ContactFormErrors>({});
+
   const [isLoading, setIsLoading] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
@@ -31,19 +31,20 @@ export default function ContactForm({
     if (Object.keys(errors).length > 0) {
       return;
     }
+
     setIsLoading(true);
     setSubmitError("");
+
     try {
       const response = await fetch("http://localhost:3000/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
         body: JSON.stringify(formData),
       });
+
       const result = await response.json();
-      console.log(result);
 
       if (result.success) {
         localStorage.removeItem("formData");
@@ -55,6 +56,7 @@ export default function ContactForm({
       }
     } catch (error) {
       console.error("Failed to send message:", error);
+
       setSubmitError("Something went wrong. Please try again.");
     } finally {
       setIsLoading(false);
@@ -70,6 +72,7 @@ export default function ContactForm({
           <label className="text-sm font-semibold text-slate-200">
             Full Name
           </label>
+
           <input
             required
             type="text"
@@ -78,10 +81,13 @@ export default function ContactForm({
             onChange={(e) =>
               setFormData({ ...formData, fullName: e.target.value })
             }
-            className="w-full px-5 py-4 rounded-xl bg-[#18395b]  border border-white text-white placeholder-slate-400 text-base focus:outline-none focus:border-[#f97316] focus:ring-1 focus:ring-[#f97316] transition"
+            className="w-full px-5 py-4 rounded-xl bg-[#18395b] border border-white text-white placeholder-slate-400 text-base focus:outline-none focus:border-[#f97316] focus:ring-1 focus:ring-[#f97316] transition"
           />
+
           {errorsValidation.fullName && (
-            <p className="text-red-400 text-sm">{errorsValidation.fullName}</p>
+            <p className="text-red-400 text-sm">
+              {errorsValidation.fullName}
+            </p>
           )}
         </div>
 
@@ -90,6 +96,7 @@ export default function ContactForm({
           <label className="text-sm font-semibold text-slate-200">
             Mobile / WhatsApp
           </label>
+
           <input
             required
             type="tel"
@@ -98,10 +105,13 @@ export default function ContactForm({
             onChange={(e) =>
               setFormData({ ...formData, phone: e.target.value })
             }
-            className="w-full px-5 py-4 rounded-xl bg-[#18395b]  border border-white text-white placeholder-slate-400 text-base focus:outline-none focus:border-[#f97316] focus:ring-1 focus:ring-[#f97316] transition"
+            className="w-full px-5 py-4 rounded-xl bg-[#18395b] border border-white text-white placeholder-slate-400 text-base focus:outline-none focus:border-[#f97316] focus:ring-1 focus:ring-[#f97316] transition"
           />
+
           {errorsValidation.phone && (
-            <p className="text-red-400 text-sm">{errorsValidation.phone}</p>
+            <p className="text-red-400 text-sm">
+              {errorsValidation.phone}
+            </p>
           )}
         </div>
       </div>
@@ -111,6 +121,7 @@ export default function ContactForm({
         <label className="text-sm font-semibold text-slate-200">
           Your Message
         </label>
+
         <textarea
           rows={5}
           required
@@ -119,10 +130,13 @@ export default function ContactForm({
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
           }
-          className="w-full px-5 py-4 rounded-xl bg-[#18395b]  border border-white text-white placeholder-slate-400 text-base focus:outline-none focus:border-[#f97316] focus:ring-1 focus:ring-[#f97316] transition resize-none"
+          className="w-full px-5 py-4 rounded-xl bg-[#18395b] border border-white text-white placeholder-slate-400 text-base focus:outline-none focus:border-[#f97316] focus:ring-1 focus:ring-[#f97316] transition resize-none"
         />
+
         {errorsValidation.message && (
-          <p className="text-red-400 text-sm">{errorsValidation.message}</p>
+          <p className="text-red-400 text-sm">
+            {errorsValidation.message}
+          </p>
         )}
       </div>
 
@@ -131,16 +145,19 @@ export default function ContactForm({
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full sm:w-auto px-10 py-4 rounded-xl bg-[#f97316] hover:bg-[#ea580c] disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-base shadow-lg shadow-orange-500/25 transition-all cursor-pointer flex items-center justify-center gap-3 active:scale-95"
+          className="w-full sm:w-auto px-10 py-4 rounded-xl bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-base shadow-lg shadow-orange-500/25 transition-all cursor-pointer flex items-center justify-center gap-3 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           <span>{isLoading ? "Sending..." : "Send Message"}</span>
+
           {!isLoading && <span className="text-lg">→</span>}
         </button>
-      </div>
 
-      {submitError && (
-        <p className="mt-3 text-sm text-red-400">{submitError}</p>
-      )}
+        {submitError && (
+          <p className="mt-3 text-sm text-red-400">
+            {submitError}
+          </p>
+        )}
+      </div>
     </form>
   );
 }

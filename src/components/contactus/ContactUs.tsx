@@ -40,7 +40,7 @@ export default function ContactUs() {
   useEffect(() => {
     if (!submitted) {
       localStorage.setItem("formData", JSON.stringify(formData));
-    } 
+    }
   }, [formData, submitted]);
 
   return (
@@ -61,11 +61,11 @@ export default function ContactUs() {
                   ✓
                 </div>
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white">
-                  Message Sent Successfully
+                  Message Sent
                 </h3>
+
                 <p className="text-slate-300 text-sm md:text-base max-w-lg mx-auto">
-                  Thank you for reaching out. Our deployment consultants will
-                  review your requirements and get back to you shortly.
+                  Thank you! We'll get back to you shortly.
                 </p>
                 <button
                   type="button"
