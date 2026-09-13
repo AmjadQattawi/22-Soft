@@ -1,4 +1,4 @@
-import SectionContainer from "../csscomponents/SectionContainer";
+import SectionContainer from "../cssComponents/SectionContainer";
 import AboutTabs from "./AboutTabs";
 import CompanyHqCard from "./CompanyHqCard";
 

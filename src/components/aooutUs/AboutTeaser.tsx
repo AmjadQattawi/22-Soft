@@ -27,7 +27,7 @@ const WHY_ITEMS = [
 ];
 export default function AboutTeaser() {
   return (
-    <section className="bg-slate-100/70 px-6 md:px-10 py-12 md:py-16 lg:py-14">
+    <section id="about" className="bg-slate-100/70 px-6 md:px-10 py-12 md:py-16 lg:py-14">
       <div className="max-w-7xl mx-auto text-center space-y-4">
         {/* العنوان الرئيسي مثل الصورة */}
         <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900  tracking-wider uppercase">

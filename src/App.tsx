@@ -16,7 +16,7 @@ function App() {
           <Route path="clients" element={<Clients />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
-          <Route path="features" element={<GoldDXLandingPage/>} />
+          <Route path="Products" element={<GoldDXLandingPage/>} />
         </Route>
       </Routes>
     </>

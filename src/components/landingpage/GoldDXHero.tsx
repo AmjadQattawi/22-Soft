@@ -1,58 +1,76 @@
-import LaptopMockup from "../../assets/mockup/DesktopApp.png";
-import MobileMockup from "../../assets/mockup/MobileApp.png";
+import { useState } from "react";
 
 export default function GoldDXHero() {
+
+    const [videoOpen, setVideoOpen] = useState(false);
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-orange-50 via-white to-white">
-      <div className="mx-auto max-w-6xl px-6 py-20  text-center lg:px-8 lg:pt-24">
-        
-<span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#f97316]">
-  22-Gold DX Jewelry ERP
-</span>
+    <section className="bg-linear-to-b from-orange-50 via-white to-white">
+      <div className="mx-auto max-w-5xl px-6 py-12 text-center lg:px-8 lg:py-14">
+        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f97316] sm:text-sm">
+          22-Gold DX Jewelry ERP
+        </span>
 
-<h1 className="mx-auto mt-4 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-[#18395b] sm:text-5xl">
-  Experience 22-Gold DX
-  <span className="block text-[#f97316]">
-    Request Your Demo
-  </span>
-</h1>
+        <h1 className="mx-auto mt-3 max-w-3xl text-3xl font-extrabold leading-tight tracking-tight text-[#18395b] sm:text-4xl lg:text-5xl">
+          Experience 22-Gold DX
+          <span className="block text-[#f97316]">Request Your Demo</span>
+        </h1>
 
-{/* <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:text-lg">
-  Discover how 22-Gold DX helps you manage inventory, sales, accounting,
-  and daily jewelry operations through one specialized ERP solution.
-</p> */}
+        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+          Discover a specialized ERP built for modern jewelry businesses.
+        </p>
 
-<div className="mt-8 flex flex-wrap justify-center gap-4">
-  <a
-    href="#request-demo"
-    className="rounded-lg bg-[#f97316] px-7 py-3 text-sm font-semibold text-white transition hover:bg-[#ea580c]"
-  >
-    Request a Demo
-  </a>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <a
+            href="#request-demo"
+            className="rounded-lg bg-[#f97316] px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-[#ea580c]"
+          >
+            Request a Demo
+          </a>
 
-  <a
-    href="#features"
-    className="rounded-lg border border-[#f97316] bg-white px-7 py-3 text-sm font-semibold text-[#f97316] transition hover:bg-orange-50"
-  >
-    Explore Features
-  </a>
-</div>
-{/* 
-        <div className="relative mx-auto mt-14 max-w-4xl">
-          <img
-            src={LaptopMockup}
-            alt="22-Gold DX Desktop Application"
-            className="mx-auto w-full max-w-3xl object-contain drop-shadow-[0_25px_45px_rgba(15,23,42,0.18)]"
-          />
+    <button
+  type="button"
+  onClick={() => setVideoOpen(true)}
+  className="rounded-lg border border-[#18395b] px-6 py-2.5 text-sm font-semibold text-[#18395b] transition hover:bg-slate-50"
+>
+  ▶ Watch Demo
+</button>
 
-          <img
-            src={MobileMockup}
-            alt="22-Gold DX Mobile Application"
-            className="absolute -bottom-8 right-[12%] w-[18%] max-w-36 object-contain drop-shadow-[0_15px_25px_rgba(15,23,42,0.25)]"
-          />
-        </div> */}
-
+          <a
+            href="#features"
+            className="rounded-lg border border-[#f97316] px-6 py-2.5 text-sm font-semibold text-[#f97316] transition hover:bg-orange-50"
+          >
+            Explore Features
+          </a>
+        </div>
       </div>
+
+      {videoOpen && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
+    <div className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-2xl">
+
+      <button
+        type="button"
+        onClick={() => setVideoOpen(false)}
+        className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-xl text-white hover:bg-black"
+      >
+        ✕
+      </button>
+
+      <video
+        controls
+        autoPlay
+        className="w-full"
+      >
+        <source
+          src="/gold_dx_demo.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+    </div>
+  </div>
+)}
     </section>
   );
 }

@@ -1,29 +1,45 @@
+import CompanyVisual from "../../assets/mockup/CompanyVisual.png";
+
 export default function SlideOne() {
   return (
-    <div className="w-full max-w-4xl mx-auto text-center px-4">
-      <div className="space-y-6">
-        <span className="inline-block text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-[#f97316]">
+    <div className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+
+      {/* Content */}
+      <div className="text-center lg:text-left">
+        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f97316] md:text-sm">
           Jewelry Software Solutions
         </span>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-white">
-          Twenty Two{" "}
-          <span className="text-[#f97316]">Programming Solutions</span>
+        <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Twenty Two
+          <span className="block text-[#f97316]">
+            Programming Solutions
+          </span>
         </h1>
 
-        <p className="max-w-2xl mx-auto text-base sm:text-lg lg:text-xl leading-relaxed text-slate-200">
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-200 sm:text-lg">
           Revolutionizing Jewelry Operations with Precision Software Solutions
         </p>
 
-        <div className="pt-2">
+        <div className="mt-7 flex justify-center lg:justify-start">
           <a
-            href="#features"
-            className="inline-flex items-center justify-center rounded-xl bg-[#f97316] px-6 py-3 text-sm sm:text-base font-semibold text-white transition duration-200 hover:bg-[#ea580c] hover:-translate-y-0.5"
+            href="/Products"
+            className="inline-flex items-center justify-center rounded-xl bg-[#f97316] px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#ea580c] sm:text-base"
           >
             Explore Products
           </a>
         </div>
       </div>
+
+      {/* Company Visual */}
+      <div className="flex items-center justify-center">
+        <img
+          src={CompanyVisual}
+          alt="22-Soft Software Solutions"
+          className="w-full max-w-2xl object-contain"
+        />
+      </div>
+
     </div>
   );
 }

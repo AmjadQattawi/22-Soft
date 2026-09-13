@@ -27,7 +27,7 @@ export default function Header() {
             Home
           </Link>
           <Link
-            to="/features"
+            to="/Products"
             className="text-white hover:text-[#e26b16] hover:bg-[#e26b16]/10 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200"
           >
             Products
@@ -45,7 +45,7 @@ export default function Header() {
 
         {/* Action Button */}
         <Link
-          to="/contact"
+          to="/Products"
           className="px-5 py-2 bg-[#f97316] hover:bg-[#ea580c]   active:scale-95 text-white  rounded-xl text-sm sm:text-base font-semibold transition duration-200  shadow-lg shadow-orange-500/20 hover:scale-105 "
         >
           Request a Demo

@@ -114,9 +114,7 @@ export default function GoldDXFeatures() {
                 key={feature.number}
                 className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16"
               >
-                {/* =================================================
-                    FEATURE CONTENT
-                ================================================== */}
+                {/* FEATURE CONTENT */}
                 <div className={reverse ? "lg:order-2" : ""}>
                   <div className="flex items-center gap-4">
                     <span className="text-sm font-bold uppercase tracking-[0.16em] text-[#f97316]">
@@ -138,18 +136,14 @@ export default function GoldDXFeatures() {
                     {feature.number}
                   </span>
                 </div>
-
-                {/* =================================================
-                    FEATURE IMAGE
-                ================================================== */}
-                {/* =================================================    FEATURE IMAGE================================================== */}
+                {/* FEATURE IMAGE  */}
                 <div
-                  className={`relative flex min-h-[360px] items-center justify-center overflow-hidden ${
+                  className={`relative flex min-h-90 items-center justify-center overflow-hidden ${
                     reverse ? "lg:order-1" : ""
                   }`}
                 >
                   {/* Background */}
-                  <div className="absolute inset-4 rounded-[32px] bg-linear-to-br from-slate-50 via-white to-orange-50" />
+                  <div className="absolute inset-4 rounded-4xl bg-linear-to-br from-slate-50 via-white to-orange-50" />
 
                   {/* Orange Glow */}
                   <div className="absolute h-56 w-56 rounded-full bg-orange-100/70 blur-3xl" />

@@ -4,21 +4,15 @@ import ContactInfo from "./ContactInfo";
 
 export interface IFormData {
   fullName: string;
-  businessName: string;
   phone: string;
-  email: string;
-  businessType: string;
-  city: string;
+  countryCode: string;
   message: string;
 }
 
 const initialFormData: IFormData = {
   fullName: "",
-  businessName: "",
   phone: "",
-  email: "",
-  businessType: "retail",
-  city: "",
+  countryCode: "+962",
   message: "",
 };
 
@@ -29,7 +23,13 @@ export default function ContactUs() {
     const savedData = localStorage.getItem("formData");
     if (savedData) {
       try {
-        return JSON.parse(savedData);
+        const parsed = JSON.parse(savedData);
+        return {
+          fullName: parsed.fullName || "",
+          phone: parsed.phone || "",
+          countryCode: parsed.countryCode || "+962",
+          message: parsed.message || "",
+        };
       } catch {
         return initialFormData;
       }
@@ -50,10 +50,10 @@ export default function ContactUs() {
     >
       <div className="max-w-7xl min-h-[calc(100vh-30rem)] mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-          {/* Left side: Prominent title and text*/}
+          {/* Left side: Prominent title and text */}
           <ContactInfo />
 
-          {/*Right side: The form*/}
+          {/* Right side: The form */}
           <div className="lg:w-7/12 w-full">
             {submitted ? (
               <div className="bg-[#489e3b] border border-slate-700/80 rounded-3xl p-10 md:p-14 text-center space-y-4">
@@ -80,7 +80,6 @@ export default function ContactUs() {
                 </button>
               </div>
             ) : (
-              // call contact form
               <ContactForm
                 setSubmitted={setSubmitted}
                 formData={formData}

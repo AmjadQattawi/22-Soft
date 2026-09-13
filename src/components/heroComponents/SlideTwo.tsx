@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LaptopMockup from "../../assets/mockup/DesktopApp.png";
 import MobileMockup from "../../assets/mockup/MobileApp.png";
 
@@ -41,12 +42,12 @@ export default function SlideTwo() {
         </p>
 
         <div className="mt-7 flex justify-center lg:justify-start">
-          <a
-            href="/contact"
+          <Link
+            to="/Products"
             className="inline-flex items-center justify-center rounded-xl bg-[#f97316] px-6 py-3 text-sm sm:text-base font-semibold text-white transition duration-200 hover:bg-[#ea580c] hover:-translate-y-0.5"
           >
             Request a Demo
-          </a>
+          </Link>
         </div>
       </div>
     </div>
