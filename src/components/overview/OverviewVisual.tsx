@@ -1,4 +1,4 @@
-import Mockup from "../../assets/mockup/Mockup.png";
+import Mockup from "../../assets/hero/Mockup.webp";
 
 export default function OverviewVisual() {
   return (

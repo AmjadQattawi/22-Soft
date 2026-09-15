@@ -18,6 +18,7 @@ export default function SliderControls({
       {/* Previous - Left Center */}
       <button
         onClick={onPrev}
+        aria-label="Previous slide"
         className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20
            w-12 h-12 rounded-full border border-white/60
            flex  justify-center
@@ -32,6 +33,7 @@ export default function SliderControls({
       {/* Next - Right Center */}
       <button
         onClick={onNext}
+        aria-label="Next slide"
         className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20
            w-12 h-12 rounded-full border border-white/60
            flex  justify-center
@@ -39,7 +41,6 @@ export default function SliderControls({
            hover:bg-[#f97316]/20 hover:border-[#f97316] hover:text-[#f97316]
            hover:scale-110
            transition-all duration-200 cursor-pointer"
-           
       >
         ›
       </button>
@@ -49,13 +50,16 @@ export default function SliderControls({
         {Array.from({ length: totalSlides }).map((_, index) => (
           <button
             key={index}
+            aria-label={`Go to slide ${index + 1}`}
             onClick={() => onSelect(index)}
-            className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
-              currentSlide === index
-                ? "w-6 bg-[#f97316]"
-                : "w-2 bg-white/40 hover:bg-white/70"
-            }`}
-          />
+            className="flex h-11 w-11 items-center justify-center hover:scale-120 transition-all cursor-pointer"
+          >
+            <span
+              className={`h-2 rounded-full transition-all duration-300 ${
+                currentSlide === index ? "w-6 bg-[#f97316]" : "w-2 bg-white/40"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </>

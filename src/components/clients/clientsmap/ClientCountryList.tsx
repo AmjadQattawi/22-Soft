@@ -12,7 +12,7 @@ export default function ClientCountryList({
   return (
     <div className="lg:col-span-4 space-y-3">
       <div>
-        <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+        <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
           Global Presence
         </span>
         <h3 className="text-xl font-extrabold text-slate-900 mt-1">

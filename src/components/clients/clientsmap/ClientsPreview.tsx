@@ -1,7 +1,7 @@
 // ClientsPreview.tsx
 
 import { Link } from "react-router-dom";
-import SectionContainer from "../../cssComponents/SectionContainer";
+import SectionContainer from "../../csscomponents/SectionContainer";
 import ClientsSlider from "../ClientsSlider";
 
 export default function ClientsPreview() {

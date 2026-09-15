@@ -6,8 +6,9 @@ export default function MainLayout() {
   return (
     <>
       <Header />
-      {/* <PageNavigationButtons /> */}
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
   );

@@ -1,31 +1,42 @@
-import SectionContainer from "../cssComponents/SectionContainer";
+import SectionContainer from "../csscomponents/SectionContainer";
+import SEO from "../SEO";
 import AboutTabs from "./AboutTabs";
 import CompanyHqCard from "./CompanyHqCard";
 
 export default function AboutUs() {
   return (
-    <SectionContainer id="about" className="bg-white">
+    <SectionContainer
+      id="about"
+      className="bg-linear-to-b from-orange-50/40 via-white to-white"
+    >
+      <SEO
+        title="About 22-Soft | Jewelry Software Solutions"
+        description="Learn about 22-Soft and our focus on developing software solutions that help jewelry businesses manage their daily operations more efficiently."
+      />
+
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-3">
-        <span className="inline-block px-3.5 py-1.5 text-xs font-semibold tracking-wide bg-[#f97316]/15 border text-[#f97316] border-[#f97316]/30 rounded-full">
-          ✦ Behind 22-Gold DX
+      <div className="mx-auto max-w-3xl text-center">
+        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#c2410c] sm:text-sm">
+          About 22-Soft
         </span>
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
-          Engineered for{" "}
-          <span className="text-[#f97316]">Absolute Precision</span> & Trust
-        </h2>
-        <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-          Delivering high-grade software systems that empower jewelry
-          enterprises to master daily transactions, inventory, and gold ledgers.
+
+        <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-[#18395b] md:text-4xl lg:text-5xl">
+          Software Built for
+          <span className="block text-[#f97316]">
+            Modern Jewelry Businesses
+          </span>
+        </h1>
+
+        <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 md:text-base">
+          We develop specialized software solutions that help jewelry
+          businesses manage inventory, sales, accounting, and daily operations
+          with greater control and efficiency.
         </p>
       </div>
 
-      {/* 2-Column Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-        {/* Left Column: Interactive Tabs with Clean Paragraphs */}
+      {/* About Content */}
+      <div className="mt-14 grid grid-cols-1 items-stretch gap-8 lg:grid-cols-12">
         <AboutTabs />
-
-        {/* Right Column: HQ & Contact Card */}
         <CompanyHqCard />
       </div>
     </SectionContainer>

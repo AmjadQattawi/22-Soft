@@ -40,7 +40,7 @@ export default function ClientsSlider() {
                 {client.name}
               </span>
 
-              <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[9px] font-medium text-slate-500">
+              <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[9px] font-medium text-slate-700">
                 {client.country}
               </span>
             </div>

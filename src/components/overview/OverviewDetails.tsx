@@ -4,8 +4,8 @@ const FEATURES = [
     description: "Powerful business and accounting capabilities.",
   },
   {
-    title: "Expanded Capabilities",
-    description: "Designed for the needs of modern jewelry businesses.",
+    title: "RFID Jewelry Inventory",
+    description: "Track and locate jewelry faster with integrated RFID technology.",
   },
   {
     title: "Mobile Companion App",
@@ -31,7 +31,7 @@ export default function OverviewDetails() {
             <h4 className="font-semibold text-[#18395b]">
               {feature.title}
             </h4>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-slate-600">
               {feature.description}
             </p>
           </div>

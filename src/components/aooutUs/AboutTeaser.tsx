@@ -29,13 +29,11 @@ export default function AboutTeaser() {
   return (
     <section id="about" className="bg-slate-100/70 px-6 md:px-10 py-12 md:py-16 lg:py-14">
       <div className="max-w-7xl mx-auto text-center space-y-4">
-        {/* العنوان الرئيسي مثل الصورة */}
         <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900  tracking-wider uppercase">
           Who We Are
         </h2>
 
-        {/* النص التعريفي بنفس التنسيق والمحاذاة */}
-        <p className="text-slate-500 text-sm sm:text-lg leading-relaxed   mx-auto">
+        <p className="text-slate-600 text-sm sm:text-lg leading-relaxed   mx-auto">
           22-Soft, a software company based in Jordan, specializes in delivering
           innovative digital solutions to the gold and jewelry sector. Our focus
           is on helping businesses improve operational efficiency and inventory
@@ -43,7 +41,6 @@ export default function AboutTeaser() {
           wholesalers, and manufacturers aiming to modernize their operations.
         </p>
 
-        {/* الزر البيضاوي البسيط مثل الصورة تماماً */}
         <div className="pt-2">
           <Link
             to="/about"
@@ -55,7 +52,6 @@ export default function AboutTeaser() {
 
 
 
-        {/* الخط الفاصل والعنوان الوسيط */}
         <div className="relative my-14">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-slate-300/80" />
@@ -77,7 +73,7 @@ export default function AboutTeaser() {
               <h3 className="font-bold text-slate-800 text-lg">
                 {item.title}
               </h3>
-              <p className="text-slate-500 text-sm sm:text-lg leading-relaxed   mx-auto">
+              <p className="text-slate-600 text-sm sm:text-lg leading-relaxed   mx-auto">
                 {item.description}
               </p>
             </div>

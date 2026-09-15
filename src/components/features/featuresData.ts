@@ -1,6 +1,6 @@
 // data/featuresData.ts
 import posBillingImg from "../../assets/features/pos-billing.png";
-import positionChartImg from "../../assets/features/position-chart.png";
+import positionChartImg from "../../assets/features/position-chart.webp";
 import PreciseInventoryImg from "../../assets/features/Precise Inventory.png";
 import auditLedgerImg from "../../assets/features/audit-ledger.png";
 
@@ -35,7 +35,7 @@ export const featuresList: FeatureItem[] = [
     imageSrc: positionChartImg,
     imageAlt: "Live Bullion and Currency Position Analytics",
     accentColor: "border-[#43923d]/50",
-    badgeBg: "bg-[#43923d]/10 text-[#43923d]",
+    badgeBg: "bg-[#43923d]/10 text-[#2f6f2b]",
   },
 
     {
@@ -53,7 +53,7 @@ export const featuresList: FeatureItem[] = [
     imageSrc: auditLedgerImg,
     imageAlt: "Audit Trail and Accounting Ledger",
     accentColor: "border-amber-500/50",
-    badgeBg: "bg-amber-50 text-amber-600",
+   badgeBg: "bg-amber-50 text-amber-800",
   },
 
 
@@ -61,7 +61,7 @@ export const featuresList: FeatureItem[] = [
     id: 3,
     number: "03",
     badge: "Precise Inventory",
-    title: "Jewelry Items & Gem Valuation",
+    title: "Jewelry Inventory  & Gem Valuation",
     description:
       "Fine-grained inventory management distinguishing between gross physical weight, net pure weight, and precious stones.",
     // highlights: [
@@ -90,6 +90,6 @@ export const featuresList: FeatureItem[] = [
     imageSrc: posBillingImg,
     imageAlt: "22-Gold DX POS Billing Interface",
     accentColor: "border-[#f97316]/50",
-    badgeBg: "bg-[#f97316]/10 text-[#f97316]",
+    badgeBg: "bg-[#f97316]/10 text-[#c2410c]",
   },
 ];

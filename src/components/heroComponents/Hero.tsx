@@ -1,9 +1,10 @@
   import { useState, useEffect } from "react";
   import SlideOne from "./SlideOne";
-  import SlideTwo from "./SlideTwo";
-  import SlideThree from "./SlideThree";
+ 
   import SliderControls from "./SliderControls";
   import { AnimatePresence, motion } from "framer-motion";
+import SlideTwo from "./SlideTwo";
+import SlideThree from "./SlideThree";
   export default function Hero() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
@@ -27,6 +28,7 @@
 
     return (
       <section
+        id="home"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         className="

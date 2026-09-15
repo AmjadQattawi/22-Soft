@@ -7,7 +7,7 @@ export default function ContactInfo() {
       </span> */}
 
       <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight">
-        Contact <span className="text-[#f97316]">us.</span>
+        Contact <span className="text-[#FF8A3D]">us.</span>
       </h2>
 
  

@@ -1,7 +1,7 @@
 export default function OverviewHeader() {
   return (
     <div className="mb-14 text-center">
-      <span className="text-sm font-semibold uppercase tracking-widest text-[#f97316]">
+      <span className="text-sm font-semibold uppercase tracking-widest text-[#c2410c]">
         The Core Offering
       </span>
 

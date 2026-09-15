@@ -1,11 +1,10 @@
-import LaptopMockup from "../../../assets/mockup/DesktopApp.png";
-import MobileMockup from "../../../assets/mockup/MobileApp.png";
-import mobilePos from "../../../assets/mobile/mobile-pos.jpg";
+import LaptopMockup from "../../../assets/hero/DesktopApp.png";
+import MobileMockup from "../../../assets/hero/MobileApp.png";
+import rfidItemLocator from "../../../assets/landing page/rfid_item_locator.png";
 
 export default function DemoProductVisual() {
   return (
     <div className="relative m-3 flex min-h-135 items-center justify-center overflow-hidden rounded-2xl p-10 lg:p-14">
-
       {/* Background */}
       <div className="absolute inset-0 bg-linear-to-br from-[#102b46] via-[#18395b] to-[#234974]" />
 
@@ -36,36 +35,28 @@ export default function DemoProductVisual() {
 
       {/* Devices */}
       <div className="relative z-10 w-full max-w-xl py-10">
-
         {/* Laptop */}
         <img
           src={LaptopMockup}
           alt="22-Gold DX Desktop Application"
-          className="relative z-10 w-full object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.38)]"
+          className="relative z-10 w-full object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.38)] "
         />
 
-        {/* POS Mobile */}
-        <div className="absolute -left-1 bottom-15 z-20 w-[22%] max-w-32 transition-transform duration-300 hover:-translate-y-2">
-          <div className="relative rounded-[22px] border-[5px] border-slate-950 bg-slate-950 p-0.5 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
-
-            <div className="absolute left-1/2 top-1.5 z-30 h-0.75  w-7 -translate-x-1/2 rounded-full bg-slate-600" />
-
-            <img
-              src={mobilePos}
-              alt="22-Gold DX Mobile POS"
-              className="aspect-9/18 w-full rounded-[15px] object-cover object-top"
-            />
-
-          </div>
-        </div>
+        {/* RFID */}
+        <img
+          src={rfidItemLocator}
+          alt="22-Gold DX RFID Smart Inventory"
+          className="absolute  bottom-10 z-20 w-[38%] max-w-72 rounded-[11px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)] "
+        />
 
         {/* Mobile App */}
         <img
           src={MobileMockup}
           alt="22-Gold DX Mobile Application"
-          className="absolute -bottom-9 right-1 z-20 w-[25%] max-w-36 object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)] transition-transform duration-300 hover:-translate-y-2"
+          className="absolute right-1 bottom-13 z-20 w-[25%] max-w-36 object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.45)] transition-transform duration-700 "
         />
 
+        <div className="absolute right-8 top-0 z-30 flex items-end transition-transform duration-300 hover:-translate-y-2"></div>
       </div>
     </div>
   );

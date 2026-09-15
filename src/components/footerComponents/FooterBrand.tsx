@@ -6,7 +6,7 @@ export default function FooterBrand() {
     <div className="lg:col-span-4 space-y-5">
       <div className="flex items-center gap-2">
         <span className="text-3xl font-black tracking-tight text-white">
-          22-<span className="text-[#f97316]">Gold DX</span>
+          22-<span className="text-[#FF8A3D]">Gold DX</span>
         </span>
       </div>
       <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
@@ -23,7 +23,7 @@ export default function FooterBrand() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-          className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#f97316] text-white flex items-center justify-center transition-all duration-200"
+          className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#FF8A3D] text-white flex items-center justify-center transition-all duration-200"
         >
           <span className="font-bold text-xs">f</span>
         </a>
@@ -32,7 +32,7 @@ export default function FooterBrand() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
-          className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#f97316] text-white flex items-center justify-center transition-all duration-200"
+          className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#FF8A3D] text-white flex items-center justify-center transition-all duration-200"
         >
           <span className="font-bold text-xs">in</span>
         </a>
@@ -41,7 +41,7 @@ export default function FooterBrand() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#f97316] text-white flex items-center justify-center transition-all duration-200"
+          className="w-8 h-8 rounded-lg bg-white/10 hover:bg-[#FF8A3D] text-white flex items-center justify-center transition-all duration-200"
         >
           <span className="font-bold text-xs">ig</span>
         </a>

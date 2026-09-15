@@ -1,4 +1,4 @@
-import SectionContainer from "../cssComponents/SectionContainer"
+import SectionContainer from "../csscomponents/SectionContainer";
 import ClientsMap from "./clientsmap/ClientsMap";
 import ClientsSlider from "./ClientsSlider";
 
@@ -11,7 +11,7 @@ export default function Clients() {
     >
       {/* Section header */}
       <div className="text-center max-w-3xl mx-auto">
-        <span className="text-sm font-semibold uppercase tracking-widest text-[#f97316]">
+        <span className="text-sm font-semibold uppercase tracking-widest text-[#B94700]">
           TRUSTED PARTNERSHIPS
         </span>
 

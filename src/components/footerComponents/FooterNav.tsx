@@ -26,7 +26,7 @@ export default function FooterNav() {
           </a>
         </li>
         <li>
-          <a href="contact" className="text-[#f97316] hover:underline font-semibold">
+          <a href="contact" className="text-[#FF8A3D] hover:underline font-semibold">
             Contact Us
           </a>
         </li>

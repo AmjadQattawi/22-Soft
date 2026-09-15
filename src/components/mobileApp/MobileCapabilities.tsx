@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const capabilities = [
   {
-    title: "Visual Showcase Catalog",
+    title: "Mobile Showcase Catalog",
     desc: "HD piece showcase with instant karat and ID lookups.",
   },
   {
@@ -18,19 +18,19 @@ const capabilities = [
 export default function MobileCapabilities() {
   return (
     <motion.div
-      className="flex flex-col gap-6"
+      className="flex flex-col gap-6 "
       initial={{ opacity: 0, x: -30 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
-      <span className="text-xs font-semibold uppercase tracking-widest text-[#f97316]">
-        MOBILE EXPERIENCE
+      <span className="text-xs font-semibold uppercase tracking-widest text-[#c94f00]">
+        22-GOLD DX MOBILE
       </span>
 
       <h2 className="text-2xl md:text-4xl font-bold text-[#18395b] tracking-tight leading-tight">
         Run Your Jewelry Business{" "}
-        <span className="text-[#f97316]">From Anywhere</span>
+        <span className="text-[#c94f00]">From Anywhere</span>
       </h2>
 <p className="text-base leading-7 text-slate-600 max-w-xl">
   Stay connected to 22-Gold DX beyond the desktop with mobile access to key business operations.
@@ -39,22 +39,22 @@ export default function MobileCapabilities() {
         {capabilities.map((item, idx) => (
           <div
             key={idx}
-            className="flex items-start gap-3 p-4 rounded-xl bg-slate-50/80 border border-slate-200/80 hover:border-[#f97316]/40 transition-colors duration-200"
+            className="flex items-start gap-3 p-4 rounded-xl bg-white/60 border border-slate-200/80  transition-colors duration-200"
           >
-            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#f97316]/15 text-[#f97316] text-xs font-bold shrink-0 mt-0.5">
+            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#f97316]/15 text-[#c94f00] text-xs font-bold shrink-0 mt-0.5">
               ✓
             </span>
             <div>
-              <h4 className="text-sm font-bold text-[#18395b] leading-none">
+              <h3 className="text-sm font-bold text-[#18395b] leading-none">
                 {item.title}
-              </h4>
-              <p className="text-xs text-slate-500 mt-1.5">{item.desc}</p>
+              </h3>
+              <p className="text-xs text-slate-600 mt-1.5">{item.desc}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2.5 pt-3 text-xs font-medium text-slate-500">
+      <div className="flex flex-wrap items-center gap-2.5 pt-3 text-xs font-medium text-slate-600">
         <a
           href="https://play.google.com/store/apps/details?id=com.soft_22App"
           target="_blank"
@@ -79,7 +79,7 @@ export default function MobileCapabilities() {
           <span>Download iOS</span>
         </a>
 
-        <span className="text-slate-400">• Offline Sync</span>
+        <span className="text-slate-600">• Offline Sync</span>
       </div>
     </motion.div>
   );

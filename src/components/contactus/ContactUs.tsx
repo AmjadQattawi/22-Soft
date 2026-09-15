@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
+import SEO from "../SEO";
 
 export interface IFormData {
   fullName: string;
@@ -48,6 +49,10 @@ export default function ContactUs() {
       id="contact"
       className="relative bg-[#102b46] text-white px-6 md:px-12 py-20 lg:py-28 scroll-mt-20 overflow-hidden"
     >
+      <SEO
+        title="Contact 22-Soft | Jewelry Software Solutions"
+        description="Contact 22-Soft to learn more about our jewelry software solutions, 22-Gold DX, product demos, and business inquiries."
+      />
       <div className="max-w-7xl min-h-[calc(100vh-30rem)] mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Left side: Prominent title and text */}

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import mobileCatalog from "../../assets/mobile/mobile-catalog.jpg";
-import mobilePos from "../../assets/mobile/mobile-pos.jpg";
-import mobilePrimary from "../../assets/mobile/mobilePrimary.jpg";
+import mobileCatalog from "../../assets/mobile/mobile-catalog.webp";
+import mobilePos from "../../assets/mobile/mobile-pos.webp";
+import mobilePrimary from "../../assets/mobile/mobilePrimary.webp";
 
 const devices = [
   {

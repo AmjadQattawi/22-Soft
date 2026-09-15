@@ -3,19 +3,15 @@ import {
   ContactFormValidation,
   type ContactFormErrors,
 } from "../../../validation/ContactFormValidation";
-import {
-  initialFormData,
-  type DemoFormData,
-} from "./demoFormData";
+import { initialFormData, type DemoFormData } from "./demoFormData";
 
 import { countries } from "./demoCountries";
- 
+
 interface DemoFormProps {
   submitted: boolean;
   setSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
- 
 export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
   const [formData, setFormData] = useState<DemoFormData>(() => {
     const savedData = localStorage.getItem("formData");
@@ -44,7 +40,6 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
   const [validationErrors, setvalidationErrors] = useState<ContactFormErrors>(
     {},
   );
- 
 
   // Meaning  of ?? : If the value on the left is null or undefined, use the value on the right.
   const selectedCountry =
@@ -171,6 +166,7 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
         <div className="flex overflow-hidden rounded-xl border border-slate-300 bg-white transition focus-within:border-[#f97316] focus-within:ring-2 focus-within:ring-orange-100">
           {/* Country Code */}
           <select
+            aria-label="Country code"
             value={formData.countryCode}
             onChange={(e) =>
               setFormData({
@@ -189,6 +185,7 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
 
           {/* Phone Number */}
           <input
+            aria-label="Mobile or WhatsApp number"
             type="tel"
             placeholder={selectedCountry.placeholder}
             maxLength={selectedCountry.maxLength}
@@ -235,7 +232,7 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
       <button
         type="submit"
         disabled={isLoading}
-        className="mt-2 w-full rounded-xl bg-[#f97316] px-7 py-3.5 font-semibold text-white shadow-lg shadow-orange-500/15 transition hover:-translate-y-0.5 hover:bg-[#ea580c] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="mt-2 w-full rounded-xl bg-[#c2410c] px-7 py-3.5 font-semibold text-white shadow-lg shadow-orange-500/15 transition hover:-translate-y-0.5 hover:bg-[#ea580c] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {isLoading ? "Sending..." : "Request Your Demo"}
       </button>

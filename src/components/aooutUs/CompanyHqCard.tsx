@@ -1,37 +1,39 @@
 export default function CompanyHqCard() {
   return (
-    <div className="lg:col-span-5 bg-linear-to-br bg-[#102b46] text-white p-7 md:p-9 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden">
+    <div className="lg:col-span-5  bg-[#18395b] text-white p-7 md:p-9 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden">
       <div className="absolute top-0 right-0 -mr-12 -mt-12 w-40 h-40 bg-[#f97316]/20 rounded-full blur-2xl pointer-events-none" />
 
       <div className="space-y-6 relative">
         <div>
-          <span className="text-[11px] uppercase tracking-widest text-[#f97316] font-extrabold">
+          <span className="text-[11px] uppercase tracking-widest text-[#FF8A3D] font-extrabold">
             Headquarters
           </span>
           <h3 className="text-xl font-bold text-white mt-1">22-Soft Company</h3>
-          <p className="text-slate-400 text-xs md:text-sm mt-0.5">
+          <p className="text-slate-300 text-xs md:text-sm mt-0.5">
             Specialized Enterprise Software & Solutions
           </p>
         </div>
 
         {/* Details */}
         <div className="space-y-4 text-xs md:text-sm text-slate-300">
+          <div>
           <a
             href="https://maps.app.goo.gl/cFQKUsXYDpEVbujj8"
             target="_blank"
             rel="noopener noreferrer"
           >
             <p className="font-semibold text-white">Main Office</p>
-            <p className="text-slate-400 mt-0.5">
+            <p className="text-slate-300 mt-0.5">
               Ali Nassouh At-Taher St., Al Swaifyeh, Amman, Jordan
             </p>
           </a>
+          </div>
 
           <div>
             <p className="font-semibold text-white">Telephone</p>
             <a
               href="tel:065930238"
-              className="text-slate-400 hover:text-white transition mt-0.5 block"
+              className="text-slate-300 hover:text-white transition mt-0.5 block"
             >
               06 5930238
             </a>
@@ -39,7 +41,7 @@ export default function CompanyHqCard() {
 
           <div>
             <p className="font-semibold text-white">Direct Mobile Lines</p>
-            <p className="text-slate-400 mt-0.5">
+            <p className="text-slate-300 mt-0.5">
               <a
                 href="tel:00962792223100"
                 className="hover:text-white transition"
@@ -71,8 +73,8 @@ export default function CompanyHqCard() {
       {/* Action Link */}
       <div className="pt-6 relative">
         <a
-          href="/Products"
-          className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-xs md:text-sm shadow-md transition-all duration-200"
+          href="/22-gold-dx"
+          className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#c94f00] hover:bg-[#ea580c] text-white font-bold text-xs md:text-sm shadow-md transition-all duration-200"
         >
           Schedule Consultation & Visit
           <span>→</span>

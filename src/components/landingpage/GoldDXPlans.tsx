@@ -56,13 +56,13 @@ export default function GoldDXPlans() {
             SECTION HEADER
         ===================================================== */}
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#f97316]">
+          <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#c94f00]">
             Choose Your Plan
           </span>
 
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#18395b] sm:text-4xl">
             A Plan for Every
-            <span className="text-[#f97316]"> Jewelry Business</span>
+            <span className="text-[#c94f00]"> Jewelry Business</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600">
@@ -88,7 +88,7 @@ export default function GoldDXPlans() {
                   MOST POPULAR BADGE
               ================================================== */}
               {plan.popular && (
-                <span className="absolute right-6 top-6 rounded-full bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#f97316]">
+                <span className="absolute right-6 top-6 rounded-full bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#b94700]">
                   Most Popular
                 </span>
               )}
@@ -119,7 +119,7 @@ export default function GoldDXPlans() {
                     className="flex items-start gap-3 text-sm text-slate-600"
                   >
                     {/* Check Icon */}
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-50 text-xs font-bold text-[#f97316]">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-50 text-xs font-bold text-[#c94f00]">
                       ✓
                     </span>
 
@@ -135,8 +135,8 @@ export default function GoldDXPlans() {
                 href="#request-demo"
                 className={`mt-9 flex w-full items-center justify-center rounded-xl px-6 py-3.5 text-sm font-bold transition ${
                   plan.popular
-                    ? "bg-[#f97316] text-white shadow-lg shadow-orange-500/20 hover:bg-[#ea580c]"
-                    : "border border-[#f97316] text-[#f97316] hover:bg-orange-50"
+                    ? "bg-[#c94f00] text-white shadow-lg shadow-orange-500/20 hover:bg-[#ea580c]"
+                    : "border border-[#c94f00] text-[#c94f00] hover:bg-orange-50"
                 }`}
               >
                 Request Demo

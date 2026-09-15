@@ -37,7 +37,7 @@ export default function FeatureTabsList({
                 {item.badge}
               </span>
               <span
-                className="text-2xl font-black text-[#f97316] "
+                className="text-2xl font-black text-[#C94F00] "
                 
               >
                 {item.number}

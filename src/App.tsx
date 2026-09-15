@@ -1,4 +1,4 @@
-import Clients from "./components/clients/Clients";
+ 
 import ContactUs from "./components/contactus/ContactUs";
 
 import { Route, Routes } from "react-router-dom";
@@ -13,10 +13,10 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="clients" element={<Clients />} />
+          
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
-          <Route path="Products" element={<GoldDXLandingPage/>} />
+          <Route path="22-gold-dx" element={<GoldDXLandingPage/>} />
         </Route>
       </Routes>
     </>
