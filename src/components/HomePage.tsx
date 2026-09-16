@@ -18,7 +18,8 @@ export default function HomePage() {
       <AboutTeaser />
       <Overview />
       <Features />
-      <RFIDSection /> <MobileApp />
+      <RFIDSection /> 
+      <MobileApp />
       <Clients />
     </>
   );

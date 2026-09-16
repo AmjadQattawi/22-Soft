@@ -23,6 +23,8 @@ import SlideThree from "./SlideThree";
         setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
       }, 5000);
 
+      // (Cleanup Function)  clear the old timer from the browser's memory when changing state or closing the page
+      //  to prevent timer interference(تداخل) and memory leaks.
       return () => clearInterval(timer);
     }, [isPaused]);
 

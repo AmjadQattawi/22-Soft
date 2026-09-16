@@ -6,22 +6,22 @@ export default function FooterNav() {
       </p>
       <ul className="space-y-2.5 text-sm text-slate-300">
         <li>
-          <a href="#overview" className="hover:text-[#f97316] transition">
+          <a href="#overview" className="hover:text-[#FF8A3D] transition">
             Overview
           </a>
         </li>
         <li>
-          <a href="#features" className="hover:text-[#f97316] transition">
+          <a href="#features" className="hover:text-[#FF8A3D] transition">
             Core Features
           </a>
         </li>
         <li>
-          <a href="#clients" className="hover:text-[#f97316] transition">
+          <a href="#clients" className="hover:text-[#FF8A3D] transition">
             Key Clients
           </a>
         </li>
         <li>
-          <a href="#about" className="hover:text-[#f97316] transition">
+          <a href="#about" className="hover:text-[#FF8A3D] transition">
             About Us
           </a>
         </li>

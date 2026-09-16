@@ -1,3 +1,24 @@
+
+//npm install libphonenumber-js : Library   handle international telephone numbers
+import {
+  parsePhoneNumberFromString,
+  type CountryCode,
+} from "libphonenumber-js";
+
+const countryMap: Record<string, CountryCode> = {
+  "+962": "JO",
+  "+966": "SA",
+  "+970": "PS",
+  "+964": "IQ",
+  "+971": "AE",
+  "+974": "QA",
+  "+965": "KW",
+  "+973": "BH",
+  "+968": "OM",
+  "+212": "MA",
+  "+1": "US",
+};
+
 export interface ValidationFormData {
   fullName: string;
   phone: string;
@@ -39,33 +60,22 @@ export function ContactFormValidation(
       errors.email = "Invalid email address";
     }
   }
+ 
+// Phone
+const phone = formData.phone.trim();
+const country = countryMap[formData.countryCode];
 
-  // Phone
-  const phoneLengths: Record<string, number> = {
-    "+962": 9, // Jordan
-    "+966": 9, // Saudi Arabia
-    "+970": 9, // Palestine
-    "+964": 10, // Iraq
-    "+971": 9, // UAE
-    "+974": 8, // Qatar
-    "+965": 8, // Kuwait
-    "+973": 8, // Bahrain
-    "+968": 8, // Oman
-    "+212": 9, // Morocco
-    "+1": 10, // USA
-  };
+if (!phone) {
+  errors.phone = "Phone number is required";
+} else if (!country) {
+  errors.phone = "Invalid country";
+} else {
+  const phoneNumber = parsePhoneNumberFromString(phone, country);
 
-  const phone = formData.phone.trim();
-  const requiredLength = phoneLengths[formData.countryCode];
-
-  if (!phone) {
-    errors.phone = "Phone number is required";
-  } else if (!/^\d+$/.test(phone)) {
-    errors.phone = "Phone number must contain numbers only";
-  } else if (requiredLength && phone.length !== requiredLength) {
-    errors.phone = `Phone number must be ${requiredLength} digits`;
+  if (!phoneNumber || !phoneNumber.isValid()) {
+    errors.phone = "Invalid phone number";
   }
-
+}
   // Message
   const trimmedMessage = formData.message.trim();
 

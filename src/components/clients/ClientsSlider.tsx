@@ -36,7 +36,7 @@ export default function ClientsSlider() {
 
             {/* Client Info */}
             <div className="flex w-full flex-col items-center gap-1 border-t border-slate-100 pt-1.5">
-              <span className="max-w-full truncate text-center text-[11px] font-bold text-slate-700 transition-colors group-hover:text-[#f97316]">
+              <span className="max-w-full truncate text-center text-[11px] font-bold text-slate-700 transition-colors group-hover:text-[#B94700]">
                 {client.name}
               </span>
 

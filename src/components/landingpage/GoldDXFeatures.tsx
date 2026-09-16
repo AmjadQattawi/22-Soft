@@ -178,7 +178,7 @@ export default function GoldDXFeatures() {
                       <img
                         src={feature.deviceImage}
                         alt="Zebra RFID Reader"
-                        className="absolute left-[12%] top-1/2 z-10 w-[48%] max-w-55 -translate-y-1/2 object-contain drop-shadow-[0_25px_30px_rgba(15,23,42,0.22)]  transition-transform duration-500  "
+                        className="absolute left-[12%] top-1/2 z-10 w-[48%] max-w-75 -translate-y-1/2 object-contain drop-shadow-[0_25px_30px_rgba(15,23,42,0.22)]  transition-transform duration-500  "
                       />
 
                       {/* Smart Inventory Phone */}

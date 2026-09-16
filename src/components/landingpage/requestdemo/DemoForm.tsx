@@ -58,7 +58,7 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
     setIsLoading(true);
     setSubmitError("");
     try {
-      const response = await fetch("http://localhost:3000/api/contact", {
+      const response = await fetch("https://localhost:3000/api/contact", {
         method: "POST",
 
         headers: {
@@ -68,6 +68,7 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
         body: JSON.stringify({
           fullName: formData.fullName,
           email: formData.email,
+          countryCode: formData.countryCode,
           phone: formData.phone,
           message: formData.message,
         }),
@@ -188,7 +189,7 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
             aria-label="Mobile or WhatsApp number"
             type="tel"
             placeholder={selectedCountry.placeholder}
-            maxLength={selectedCountry.maxLength}
+            maxLength={20}
             value={formData.phone}
             onChange={(e) => {
               // Allow numbers only
