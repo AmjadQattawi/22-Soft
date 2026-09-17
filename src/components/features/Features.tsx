@@ -16,7 +16,7 @@ export default function Features() {
   }, []);
   return (
     <SectionContainer
-      id="features"
+      id="products"
       className="bg-slate-100/70  "
       divclassName="gap-1 lg:gap-2"
     >

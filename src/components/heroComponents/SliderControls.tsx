@@ -14,7 +14,7 @@ export default function SliderControls({
   onSelect,
 }: SliderControlsProps) {
   return (
-    <>
+    <div dir="ltr">
       {/* Previous - Left Center */}
       <button
         onClick={onPrev}
@@ -62,6 +62,6 @@ export default function SliderControls({
           </button>
         ))}
       </div>
-    </>
+   </div>
   );
 }

@@ -16,10 +16,12 @@
     "express": "^5.2.1",
     "express-rate-limit": "^8.7.0",
     "framer-motion": "^13.1.1",
+    "i18next": "^26.4.2",
     "libphonenumber-js": "^1.13.13",
     "nodemailer": "^10.0.7",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-i18next": "^17.0.14",
     "react-router-dom": "^7.18.3",
     "tailwindcss": "^4.3.3"
   },

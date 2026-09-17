@@ -5,14 +5,14 @@ export default function ClientsSlider() {
   const marqueeList = [...clients, ...clients, ...clients, ...clients];
 
   return (
-    <div className="relative w-full overflow-hidden ">
+    <div dir="ltr" className="relative w-full overflow-hidden ">
       {/* Side Gradients */}
       <div className="pointer-events-none absolute bottom-0 left-0 top-0 z-10 w-16 bg-linear-to-r from-white to-transparent md:w-28" />
 
       <div className="pointer-events-none absolute bottom-0 right-0 top-0 z-10 w-16 bg-linear-to-l from-white to-transparent md:w-28" />
 
       <motion.div
-        className="flex w-max items-center gap-5"
+        className="flex w-max items-center "
         animate={{ x: ["0%", "-25%"] }}
         transition={{
           ease: "linear",
@@ -23,7 +23,7 @@ export default function ClientsSlider() {
         {marqueeList.map((client, index) => (
           <div
             key={index}
-            className="group flex h-24 w-28 shrink-0 cursor-pointer flex-col items-center justify-between rounded-xl border border-slate-200/80 bg-white p-2.5 shadow-xs transition-all duration-300 hover:scale-105 hover:shadow-md md:h-28 md:w-32"
+            className="group mr-5 flex h-24 w-28 shrink-0 cursor-pointer flex-col items-center justify-between rounded-xl border border-slate-200/80 bg-white p-2.5 shadow-xs transition-all duration-300 hover:scale-105 hover:shadow-md md:h-28 md:w-32"
           >
             {/* Logo */}
             <div className="flex w-full flex-1 items-center justify-center overflow-hidden">

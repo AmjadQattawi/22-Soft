@@ -1,8 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 export default function FooterContact() {
+  const { t } = useTranslation();
+
   return (
     <div className="lg:col-span-2 space-y-4">
       <p className="text-white font-bold text-base uppercase tracking-wider">
-        Contact Us
+        {t("footer.contact.title")}
       </p>
       <ul className="space-y-3 text-sm text-slate-300">
 <li className="flex items-start gap-2">
@@ -13,7 +17,7 @@ export default function FooterContact() {
   rel="noopener noreferrer"
   className="hover:text-white transition"
 >
-  Ali Nassouh At-Taher St., Amman, Jordan
+  {t("footer.contact.address")}
 </a>
 </li>
         <li className="flex items-center gap-2">

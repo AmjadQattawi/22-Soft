@@ -6,6 +6,7 @@ import profitOverviewMobile from "../../assets/landing page/profit_overview_mobi
 import salesInvoiceDesktop from "../../assets/landing page/sales_invoice_desktop.png";
 import zebraRfidReader from "../../assets/landing page/rfid_item_locator.png";
 import rfidSmartInventory from "../../assets/landing page/rfid/rfid_smart_inventory.jpeg";
+import { useTranslation } from "react-i18next";
 
 // ============================================================
 // FEATURES DATA
@@ -13,6 +14,7 @@ import rfidSmartInventory from "../../assets/landing page/rfid/rfid_smart_invent
 const features = [
   {
     number: "01",
+    translationKey: "rfidInventory",
     category: "RFID Inventory",
     title: "RFID Jewelry Inventory Tracking",
     description:
@@ -24,6 +26,7 @@ const features = [
   },
   {
     number: "02",
+    translationKey: "mobileManagement",
     category: "Mobile App",
     title: "Mobile Business Management",
     description:
@@ -35,6 +38,7 @@ const features = [
 
     {
     number: "03",
+    translationKey: "businessInsights",
     category: "Market Analytics",
     title: "Sales & Business Insights",
     description:
@@ -45,6 +49,7 @@ const features = [
   },
   {
     number: "04",
+    translationKey: "posInvoicing",
     category: "Fast POS & Invoicing",
     title: "Jewelry POS & Invoicing Software",
     description:
@@ -58,6 +63,7 @@ const features = [
 
   {
     number: "05",
+    translationKey: "financialOverview",
     category: "Financial Control",
     title: "Profit & Financial Overview",
     description:
@@ -69,6 +75,7 @@ const features = [
 
   {
     number: "06",
+    translationKey: "inventoryManagement",
     category: "Precise Inventory",
     title: "Jewelry Inventory Management Software",
     description:
@@ -80,6 +87,7 @@ const features = [
 
   {
     number: "07",
+    translationKey: "auditTrail",
     category: "Security & Control",
     title: "Audit Trail & Financial Ledger",
     description:
@@ -95,6 +103,8 @@ const features = [
 // ============================================================
 
 export default function GoldDXFeatures() {
+  const { t } = useTranslation();
+
   return (
     <section id="features" className="bg-white py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -103,17 +113,18 @@ export default function GoldDXFeatures() {
         ===================================================== */}
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#c94f00]">
-            22-Gold DX Features
+            {t("goldDX.features.label")}
           </span>
 
           <h2 className="mt-3 text-3xl font-extrabold text-[#18395b] sm:text-4xl">
-            Everything You Need to Manage
-            <span className="block text-[#c94f00]">Your Jewelry Business</span>
+            {t("goldDX.features.title")}
+            <span className="block text-[#c94f00]">
+              {t("goldDX.features.highlight")}
+            </span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-600">
-            Powerful tools designed to simplify daily jewelry operations, from
-            inventory and sales to analytics and financial management.
+            {t("goldDX.features.description")}
           </p>
         </div>
 
@@ -133,18 +144,24 @@ export default function GoldDXFeatures() {
                 <div className={reverse ? "lg:order-2" : ""}>
                   <div className="flex items-center gap-4">
                     <span className="text-sm font-bold uppercase tracking-[0.16em] text-[#c94f00]">
-                      {feature.category}
+                      {t(
+                        `goldDX.features.items.${feature.translationKey}.category`,
+                      )}
                     </span>
 
                     <div className="h-px w-10 bg-orange-200" />
                   </div>
 
                   <h3 className="mt-4 text-2xl font-bold text-[#18395b] sm:text-3xl">
-                    {feature.title}
+                    {t(
+                      `goldDX.features.items.${feature.translationKey}.title`,
+                    )}
                   </h3>
 
                   <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
-                    {feature.description}
+                    {t(
+                      `goldDX.features.items.${feature.translationKey}.description`,
+                    )}
                   </p>
 
                   <span className="mt-7 block text-5xl font-extrabold text-slate-300">

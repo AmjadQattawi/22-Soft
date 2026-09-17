@@ -1,20 +1,21 @@
-
-
 import { motion } from "framer-motion";
-import { type FeatureItem } from "./featuresData";
+import type { FeatureItem } from "./featuresData";
+import { useTranslation } from "react-i18next";
 
-interface FeatureTabsListProps {
+type Props = {
   features: FeatureItem[];
   activeIdx: number;
-  onSelectTab: (index: number) => void;
-}
+  onSelectTab: (idx: number) => void;
+};
 
 export default function FeatureTabsList({
   features,
   activeIdx,
   onSelectTab,
-}: FeatureTabsListProps) {
-    // lg:col-span-3
+}: Props) {
+  const { t } = useTranslation();
+
+  // lg:col-span-3
 
   return (
     <div className="lg:col-span-3 space-y-3">
@@ -34,7 +35,7 @@ export default function FeatureTabsList({
               <span
                 className={`px-2.5 py-0.5 text-xs font-bold rounded-full ${item.badgeBg}`}
               >
-                {item.badge}
+                {t(`home.features.items.${item.translationKey}.badge`)}
               </span>
               <span
                 className="text-2xl font-black text-[#C94F00] "
@@ -45,27 +46,9 @@ export default function FeatureTabsList({
             </div>
 
             <h3 className="text-base font-bold text-slate-900 mt-2">
-              {item.title}
+              {t(`home.features.items.${item.translationKey}.title`)}
             </h3>
-
-            {/* {isActive && (
-              <motion.ul
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="mt-3 space-y-1.5 border-t border-slate-100 pt-3"
-              >
-                {item.highlights.map((point, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-2 text-xs text-slate-600 font-medium"
-                  >
-                    <span className="text-[#f97316] font-bold">✓</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </motion.ul>
-            )} */}
+ 
           </motion.div>
         );
       })}

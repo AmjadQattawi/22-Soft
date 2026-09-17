@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 // ============================================================
 // PLANS DATA
 // ============================================================
 
 const plans = [
   {
+    translationKey: "starter",
     name: "Starter",
     description: "Single store getting started",
     features: [
@@ -16,6 +19,7 @@ const plans = [
   },
 
   {
+    translationKey: "pro",
     name: "Pro",
     description: "Growing multi-branch business",
     features: [
@@ -28,6 +32,7 @@ const plans = [
   },
 
   {
+    translationKey: "enterprise",
     name: "Enterprise",
     description: "Full chain & custom needs",
     features: [
@@ -45,6 +50,8 @@ const plans = [
 // ============================================================
 
 export default function GoldDXPlans() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="plans"
@@ -57,17 +64,18 @@ export default function GoldDXPlans() {
         ===================================================== */}
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-sm font-bold uppercase tracking-[0.18em] text-[#c94f00]">
-            Choose Your Plan
+            {t("goldDX.plans.label")}
           </span>
 
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#18395b] sm:text-4xl">
-            A Plan for Every
-            <span className="text-[#c94f00]"> Jewelry Business</span>
+            {t("goldDX.plans.title")}
+            <span className="text-[#c94f00]">
+              {t("goldDX.plans.highlight")}
+            </span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600">
-            Whether you operate a single store or manage multiple branches,
-            choose the 22-Gold DX plan that fits your business needs.
+            {t("goldDX.plans.description")}
           </p>
         </div>
 
@@ -89,7 +97,7 @@ export default function GoldDXPlans() {
               ================================================== */}
               {plan.popular && (
                 <span className="absolute right-6 top-6 rounded-full bg-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#b94700]">
-                  Most Popular
+                  {t("goldDX.plans.mostPopular")}
                 </span>
               )}
 
@@ -97,12 +105,12 @@ export default function GoldDXPlans() {
                   PLAN INFO
               ================================================== */}
               <div>
-                <h3 className="text-2xl font-extrabold text-[#18395b]">
-                  {plan.name}
+                <h3 dir="ltr" className="text-2xl font-extrabold text-[#18395b]">
+                  {t(`goldDX.plans.items.${plan.translationKey}.name`)}
                 </h3>
 
                 <p className="mt-2 text-sm text-slate-500">
-                  {plan.description}
+                  {t(`goldDX.plans.items.${plan.translationKey}.description`)}
                 </p>
               </div>
 
@@ -113,7 +121,7 @@ export default function GoldDXPlans() {
                   PLAN FEATURES
               ================================================== */}
               <ul className="flex-1 space-y-4">
-                {plan.features.map((feature) => (
+                {plan.features.map((feature, index) => (
                   <li
                     key={feature}
                     className="flex items-start gap-3 text-sm text-slate-600"
@@ -123,7 +131,11 @@ export default function GoldDXPlans() {
                       ✓
                     </span>
 
-                    <span>{feature}</span>
+                    <span>
+                      {t(
+                        `goldDX.plans.items.${plan.translationKey}.features.${index}`,
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -139,7 +151,7 @@ export default function GoldDXPlans() {
                     : "border border-[#c94f00] text-[#c94f00] hover:bg-orange-50"
                 }`}
               >
-                Request Demo
+                {t("goldDX.plans.requestDemo")}
               </a>
             </article>
           ))}
@@ -149,8 +161,7 @@ export default function GoldDXPlans() {
             BOTTOM NOTE
         ===================================================== */}
         <p className="mt-8 text-center text-sm text-slate-500">
-          Not sure which plan fits your business? Request a demo and our team
-          will help you find the right solution.
+          {t("goldDX.plans.bottomNote")}
         </p>
 
       </div>

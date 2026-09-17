@@ -1,4 +1,5 @@
 import { clientCountries } from "../ClientsData";
+import { useTranslation } from "react-i18next";
 
 interface ClientCountryListProps {
   activeCountry: string | null;
@@ -9,14 +10,16 @@ export default function ClientCountryList({
   activeCountry,
   setActiveCountry,
 }: ClientCountryListProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="lg:col-span-4 space-y-3">
       <div>
         <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
-          Global Presence
+          {t("home.clients.map.label")}
         </span>
         <h3 className="text-xl font-extrabold text-slate-900 mt-1">
-          Active Regional Deployment
+          {t("home.clients.map.title")}
         </h3>
       </div>
 
@@ -43,13 +46,13 @@ export default function ClientCountryList({
                   loading="lazy"
                 />
                 <span className="text-sm font-semibold text-slate-800">
-                  {c.name}
+                  {t(`home.clients.map.countries.${c.id}`)}
                 </span>
               </div>
 
               {c.isHq && (
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-200 uppercase">
-                  HQ
+                  {t("home.clients.map.hq")}
                 </span>
               )}
             </div>

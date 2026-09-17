@@ -4,14 +4,17 @@ import GoldDXFeatures from "./GoldDXFeatures";
 import GoldDXPlans from "./GoldDXPlans";
 import GoldDXClients from "./GoldDXClients";
 import SEO from "../SEO";
+import { useTranslation } from "react-i18next";
 
 export default function GoldDXLandingPage() {
+  const { t } = useTranslation();
+
   return (
     <>
 
       <SEO
-        title="22-Gold DX | Jewelry Management Software by 22-Soft"
-        description="22-Gold DX is jewelry management software designed for jewelry businesses, with inventory management, POS and invoicing, reporting, mobile operations, and RFID jewelry inventory tracking."
+        title={t("goldDX.seo.title")}
+        description={t("goldDX.seo.description")}
       />
       <GoldDXHero />
       <RequestDemo />

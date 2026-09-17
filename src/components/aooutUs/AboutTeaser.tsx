@@ -1,44 +1,37 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const WHY_ITEMS = [
   {
     icon: "💬",
-    title: "Personalized Support",
-    description:
-      "We understand that each business in the jewelry sector has unique needs, offering dedicated account managers who tailor solutions specifically to your process.",
+    title: "personalizedSupport",
   },
   {
     icon: "🎓",
-    title: "Comprehensive Training",
-    description:
-      "Seamless integration through hands-on sessions covering everything from basic sales flows to advanced accounting ledgers and bullion management.",
+    title: "comprehensiveTraining",
   },
   {
     icon: "🛠️",
-    title: "Technical Assistance",
-    description:
-      "Reliable support ensuring high availability, continuous data backup, and rapid troubleshooting to keep store branches running uninterrupted.",
+    title: "technicalAssistance",
   },
   {
     icon: "⚙️",
-    title: "Continuous Feedback",
-    description:
-      "Product updates driven by actual market needs, continuously refining features based on direct insights from gold traders and craftsmen.",
+    title: "continuousFeedback",
   },
 ];
+
 export default function AboutTeaser() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="bg-slate-100/70 px-6 md:px-10 py-12 md:py-16 lg:py-14">
       <div className="max-w-7xl mx-auto text-center space-y-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900  tracking-wider uppercase">
-          Who We Are
+          {t("home.aboutTeaser.title")}
         </h2>
 
         <p className="text-slate-600 text-sm sm:text-lg leading-relaxed   mx-auto">
-          22-Soft, a software company based in Jordan, specializes in delivering
-          innovative digital solutions to the gold and jewelry sector. Our focus
-          is on helping businesses improve operational efficiency and inventory
-          accuracy through specialized software. We cater to jewelry retailers,
-          wholesalers, and manufacturers aiming to modernize their operations.
+          {t("home.aboutTeaser.description")}
         </p>
 
         <div className="pt-2">
@@ -46,7 +39,7 @@ export default function AboutTeaser() {
             to="/about"
             className="inline-block px-8 py-2 rounded-full border border-slate-300 hover:border-slate-900 text-slate-700 hover:text-slate-950 bg-white hover:bg-slate-50 text-xs font-semibold uppercase tracking-wider transition-all duration-200 shadow-xs"
           >
-            About Us
+            {t("home.aboutTeaser.button")}
           </Link>
         </div>
 
@@ -58,7 +51,7 @@ export default function AboutTeaser() {
           </div>
           <div className="relative flex justify-center">
             <span className="bg-slate-100/70 px-6 text-1xl md:text-2xl font-bold tracking-widest text-slate-700 uppercase">
-              Why 22-Soft
+              {t("home.aboutTeaser.whyTitle")}
             </span>
           </div>
         </div>
@@ -71,10 +64,10 @@ export default function AboutTeaser() {
                 {item.icon}
               </div>
               <h3 className="font-bold text-slate-800 text-lg">
-                {item.title}
+                {t(`home.aboutTeaser.items.${item.title}.title`)}
               </h3>
               <p className="text-slate-600 text-sm sm:text-lg leading-relaxed   mx-auto">
-                {item.description}
+                {t(`home.aboutTeaser.items.${item.title}.description`)}
               </p>
             </div>
           ))}

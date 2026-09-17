@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function CompanyHqCard() {
+  const { t } = useTranslation();
+
   return (
     <div className="lg:col-span-5  bg-[#18395b] text-white p-7 md:p-9 rounded-3xl shadow-xl flex flex-col justify-between relative overflow-hidden">
       <div className="absolute top-0 right-0 -mr-12 -mt-12 w-40 h-40 bg-[#f97316]/20 rounded-full blur-2xl pointer-events-none" />
@@ -6,11 +10,11 @@ export default function CompanyHqCard() {
       <div className="space-y-6 relative">
         <div>
           <span className="text-[11px] uppercase tracking-widest text-[#FF8A3D] font-extrabold">
-            Headquarters
+            {t("about.companyHq.headquarters")}
           </span>
           <h3 className="text-xl font-bold text-white mt-1">22-Soft Company</h3>
           <p className="text-slate-300 text-xs md:text-sm mt-0.5">
-            Specialized Enterprise Software & Solutions
+            {t("about.companyHq.subtitle")}
           </p>
         </div>
 
@@ -22,15 +26,19 @@ export default function CompanyHqCard() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p className="font-semibold text-white">Main Office</p>
+            <p className="font-semibold text-white">
+              {t("about.companyHq.mainOffice")}
+            </p>
             <p className="text-slate-300 mt-0.5">
-              Ali Nassouh At-Taher St., Al Swaifyeh, Amman, Jordan
+              {t("about.companyHq.address")}
             </p>
           </a>
           </div>
 
           <div>
-            <p className="font-semibold text-white">Telephone</p>
+            <p className="font-semibold text-white">
+              {t("about.companyHq.telephone")}
+            </p>
             <a
               href="tel:065930238"
               className="text-slate-300 hover:text-white transition mt-0.5 block"
@@ -40,7 +48,9 @@ export default function CompanyHqCard() {
           </div>
 
           <div>
-            <p className="font-semibold text-white">Direct Mobile Lines</p>
+            <p className="font-semibold text-white">
+              {t("about.companyHq.directMobileLines")}
+            </p>
             <p className="text-slate-300 mt-0.5">
               <a
                 href="tel:00962792223100"
@@ -59,7 +69,9 @@ export default function CompanyHqCard() {
           </div>
 
           <div>
-            <p className="font-semibold text-white">Email</p>
+            <p className="font-semibold text-white">
+              {t("about.companyHq.email")}
+            </p>
             <a
               href="mailto:info@22-soft.com"
               className="text-slate-400 hover:text-white transition mt-0.5 block"
@@ -76,7 +88,7 @@ export default function CompanyHqCard() {
           href="/22-gold-dx"
           className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#c94f00] hover:bg-[#ea580c] text-white font-bold text-xs md:text-sm shadow-md transition-all duration-200"
         >
-          Schedule Consultation & Visit
+          {t("about.companyHq.action")}
           <span>→</span>
         </a>
       </div>

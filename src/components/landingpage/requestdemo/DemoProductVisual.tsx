@@ -34,7 +34,7 @@ export default function DemoProductVisual() {
       </div>
 
       {/* Devices */}
-      <div className="relative z-10 w-full max-w-xl py-10">
+      <div  dir="ltr" className="relative z-10 w-full max-w-xl py-10">
         {/* Laptop */}
         <img
           src={LaptopMockup}

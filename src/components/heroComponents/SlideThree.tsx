@@ -1,37 +1,41 @@
 import zebraRfidReader from "../../assets/landing page/rfid_item_locator.png";
 import rfidSmartInventory from "../../assets/landing page/rfid/rfid_smart_inventory.jpeg";
+import { useTranslation } from "react-i18next";
 
 export default function SlideThree() {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
       {/* Content */}
-      <div className="text-center lg:text-left">
+      <div className="text-center lg:text-start">
         <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FF8A3D] md:text-sm">
-          RFID Jewelry Technology
+          {t("home.hero.slideThree.label")}
         </span>
 
         <h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-          RFID Jewelry
-          <span className="block text-[#FF8A3D]">Inventory Solutions</span>
+          {t("home.hero.slideThree.title")}
+          <span className="block text-[#FF8A3D]">
+            {t("home.hero.slideThree.highlight")}
+          </span>
         </h2>
 
         <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-200 sm:text-lg">
-          Track, locate, and manage jewelry instantly with smart RFID technology
-          for faster and more accurate inventory control.
+          {t("home.hero.slideThree.description")}
         </p>
 
-        <div className="mt-7 flex justify-center lg:justify-start">
+        <div className="mt-7 flex justify-center lg:justify-start ">
           <a
-            href="#rfid"
+            href="/22-gold-dx#rfid"
             className="inline-flex items-center justify-center rounded-xl bg-[#c94f00] px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#ea580c] sm:text-base"
           >
-            Explore RFID Solutions
+            {t("home.hero.slideThree.button")}
           </a>
         </div>
       </div>
 
       {/* RFID Visual */}
-      <div className="relative flex h-100 items-center justify-center scale-120 animate-float">
+      <div   dir="ltr" className="relative flex h-100 items-center justify-center scale-120 animate-float">
         {/* Glow */}
         <div className="absolute h-72 w-72 rounded-full bg-orange-400/10 blur-3xl" />
 

@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 export default function FooterBrand() {
   const facebookURL = "https://www.facebook.com/TwentyTwoSoft/directory_links";
   const linkedinURL = "https://www.linkedin.com/company/22-soft/";
   const instgramURL = "https://www.instagram.com/22soft_2022/";
+
+  const { t } = useTranslation();
   return (
     <div className="lg:col-span-4 space-y-5">
       <div className="flex items-center gap-2">
@@ -9,12 +13,9 @@ export default function FooterBrand() {
           22-<span className="text-[#FF8A3D]">Gold DX</span>
         </span>
       </div>
-      <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
-        Specializes in delivering innovative digital solutions to the gold and
-        jewelry sector. Our focus is on helping businesses improve operational
-        efficiency and inventory accuracy through specialized enterprise
-        software.
-      </p>
+<p className="text-slate-300 text-sm leading-relaxed max-w-sm">
+  {t("footer.brandDescription")}
+</p>
 
       {/* Social Icons */}
       <div className="flex items-center gap-3 pt-2">

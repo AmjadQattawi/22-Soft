@@ -1,0 +1,360 @@
+{
+  "header": {
+    "home": "Home",
+    "products": "Products",
+    "aboutUs": "About Us",
+    "requestDemo": "Request a Demo"
+  },
+  "footer": {
+    "brandDescription": "Specializes in delivering innovative digital solutions to the gold and jewelry sector. Our focus is on helping businesses improve operational efficiency and inventory accuracy through specialized enterprise software.",
+    "capabilities": {
+      "title": "Capabilities",
+      "retailShowroomPOS": "Retail Showroom POS",
+      "bullionKaratSync": "Bullion & Karat Sync",
+      "scrapMeltingLog": "Scrap & Melting Log",
+      "multiCurrencyVault": "Multi-Currency Vault",
+      "realTimeMobileSync": "Real-Time Mobile Sync"
+    },
+    "navigation": {
+      "title": "Navigation",
+      "overview": "Overview",
+      "coreFeatures": "Core Features",
+      "keyClients": "Key Clients",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us"
+    },
+    "hours": {
+      "title": "Working Hours",
+      "sundayThursday": "Sunday – Thursday",
+      "weekdayTime": "9:00 AM – 6:00 PM",
+      "fridaySaturday": "Friday – Saturday",
+      "closed": "Closed",
+      "note": "ⓘ Jordan Time — Excluding official holidays"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "address": "Ali Nassouh At-Taher St., Amman, Jordan"
+    },
+    "bottom": {
+  "allRightsReserved": "All Rights Reserved.",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfService": "Terms of Service",
+  "builtFor": "Built for Gold & Bullion Trade"
+}
+  },
+  "home": {
+    "hero": {
+      "slideOne": {
+        "label": "Jewelry Software Solutions",
+        "title": "Twenty Two",
+        "highlight": "Programming Solutions",
+        "description": "Revolutionizing Jewelry Operations with Precision Software Solutions",
+        "button": "Explore Products"
+      },
+      "slideTwo": {
+        "label": "Jewelry ERP Solution",
+        "highlight": "ERP & Accounting",
+        "description": "Desktop + Mobile solution for inventory, accounting, sales, and jewelry operations.",
+        "button": "Request a Demo"
+      },
+      "slideThree": {
+        "label": "RFID Jewelry Technology",
+        "title": "Smart Jewelry Inventory",
+        "highlight": "Powered by RFID",
+        "description": "Track, locate, and manage jewelry inventory faster and more accurately with integrated RFID technology.",
+        "button": "Explore RFID Solutions"
+      }
+    },
+    "aboutTeaser": {
+      "title": "Who We Are",
+      "description": "22-Soft, a software company based in Jordan, specializes in delivering innovative digital solutions to the gold and jewelry sector. Our focus is on helping businesses improve operational efficiency and inventory accuracy through specialized software. We cater to jewelry retailers, wholesalers, and manufacturers aiming to modernize their operations.",
+      "button": "About Us",
+      "whyTitle": "Why 22-Soft",
+      "items": {
+        "personalizedSupport": {
+          "title": "Personalized Support",
+          "description": "We understand that each business in the jewelry sector has unique needs, offering dedicated account managers who tailor solutions specifically to your process."
+        },
+        "comprehensiveTraining": {
+          "title": "Comprehensive Training",
+          "description": "Seamless integration through hands-on sessions covering everything from basic sales flows to advanced accounting ledgers and bullion management."
+        },
+        "technicalAssistance": {
+          "title": "Technical Assistance",
+          "description": "Reliable support ensuring high availability, continuous data backup, and rapid troubleshooting to keep store branches running uninterrupted."
+        },
+        "continuousFeedback": {
+          "title": "Continuous Feedback",
+          "description": "Product updates driven by actual market needs, continuously refining features based on direct insights from gold traders and craftsmen."
+        }
+      }
+    },
+    "overviewHeader": {
+  "label": "The Core Offering",
+  "description": "The second generation of the 22-Gold suite, combining enhanced features, expanded capabilities, and a powerful mobile companion app."
+},
+"overviewDetails": {
+  "title": "Your Business. Connected Everywhere.",
+  "description": "Built on the proven 22-Gold foundation, 22-Gold DX helps you view, monitor, and manage your accounting data anytime, anywhere.",
+  "features": {
+    "enhancedDesktopExperience": {
+      "title": "Enhanced Desktop Experience",
+      "description": "Powerful business and accounting capabilities."
+    },
+    "rfidJewelryInventory": {
+      "title": "RFID Jewelry Inventory",
+      "description": "Track and locate jewelry faster with integrated RFID technology."
+    },
+    "mobileCompanionApp": {
+      "title": "Mobile Companion App",
+      "description": "Stay connected to your business wherever you are."
+    }
+  }
+},
+"features": {
+  "header": {
+    "label": "CORE CAPABILITIES",
+    "title": "Powerful Features for Your",
+    "highlight": "Jewelry Business",
+    "description": "From inventory and accounting to daily operations, 22-Gold DX brings all essential tools together."
+  },
+  "items": {
+    "marketAnalytics": {
+      "badge": "Market Analytics",
+      "title": "Live Bullion & Currency Position",
+      "description": "Comprehensive real-time monitoring of your liquid cash and physical bullion exposure across global and local markets."
+    },
+    "securityControl": {
+      "badge": "Security & Control",
+      "title": "Audit Trail & Financial Ledger",
+      "description": "Strict double-entry accounting and comprehensive operational auditing to prevent manual discrepancies or stock shrinkage."
+    },
+    "preciseInventory": {
+      "badge": "Precise Inventory",
+      "title": "Jewelry Inventory & Gem Valuation",
+      "description": "Fine-grained inventory management distinguishing between gross physical weight, net pure weight, and precious stones."
+    },
+    "posBilling": {
+      "badge": "Retail Operations",
+      "title": "Jewelry POS & Smart Billing",
+      "description": "Streamlined point-of-sale built specifically for jewelry retail, handling complex pricing, karat conversions, and making charges."
+    }
+  }
+},
+"rfid": {
+  "label": "RFID Jewelry Technology",
+  "title": "Smarter Inventory",
+  "highlight": "Powered by RFID",
+  "description": "Speed up jewelry inventory checks with RFID technology integrated with 22-Gold DX. Locate tagged items, identify jewelry instantly, and keep physical stock connected with your system.",
+  "benefits": {
+    "fasterInventory": {
+      "title": "Faster Inventory",
+      "description": "Scan multiple tagged items efficiently."
+    },
+    "itemLocator": {
+      "title": "Item Locator",
+      "description": "Quickly locate tagged jewelry items."
+    }
+  },
+  "button": "Explore RFID Solutions"
+},
+"mobileCapabilities": {
+  "title": "Run Your Jewelry Business",
+  "highlight": "From Anywhere",
+  "description": "Stay connected to 22-Gold DX beyond the desktop with mobile access to key business operations.",
+  "items": {
+    "mobileShowcaseCatalog": {
+      "title": "Mobile Showcase Catalog",
+      "description": "HD piece showcase with instant karat and ID lookups."
+    },
+    "mobilePOS": {
+      "title": "Mobile POS & Making Charges",
+      "description": "Scan QR codes and bill making fees on the go."
+    },
+    "vaultLedgerSync": {
+      "title": "Instant Vault & Ledger Sync",
+      "description": "Real-time updates directly to desktop accounting."
+    }
+  },
+  "downloadAndroid": "Download Android",
+  "downloadIOS": "Download iOS",
+  "offlineSync": "Offline Sync"
+},
+"clients": {
+  "label": "TRUSTED PARTNERSHIPS",
+  "title": "Trusted by Jewelry Businesses",
+  "description": "Discover some of the businesses that rely on 22-Soft solutions.",
+  "map": {
+  "label": "Global Presence",
+  "title": "Active Regional Deployment",
+  "hq": "HQ",
+  "countries": {
+    "jordan": "Jordan",
+    "palestine": "Palestine",
+    "iraq": "Iraq",
+    "uae": "UAE",
+    "morocco": "Morocco",
+    "usa": "USA"
+  }
+}
+}
+ 
+  },
+
+  "about": {
+  "seo": {
+    "title": "About 22-Soft | Jewelry Software Solutions",
+    "description": "Learn about 22-Soft and our focus on developing software solutions that help jewelry businesses manage their daily operations more efficiently."
+  },
+  "header": {
+    "label": "About 22-Soft",
+    "title": "Software Built for",
+    "highlight": "Modern Jewelry Businesses",
+    "description": "We develop specialized software solutions that help jewelry businesses manage inventory, sales, accounting, and daily operations with greater control and efficiency."
+  },
+  "tabs": {
+  "story": {
+    "label": "Our Story",
+    "title": "Rooted in Industry Practice & Software Engineering",
+    "lead": "22-Soft was founded by combining specialized software expertise with deep, hands-on field experience in retail and bullion markets. We develop dependable software built on solid technical standards to simplify complex operations with complete accuracy.",
+    "description": "Our systems evolve directly through customer feedback, ensuring complete confidentiality for sensitive vault accounts while our technical team provides continuous, attentive operational guidance."
+  },
+  "vision": {
+    "label": "Our Vision",
+    "title": "Pioneering the Digital Transformation of Jewelry Trade",
+    "lead": "We envision an effortless digital transition across gold workshops and retail counters, eliminating manual paperwork while keeping data integrity strictly intact.",
+    "description": "By leveraging modern technologies, we empower companies to achieve micro-gram precision across all karats, scrap melting, and multi-currency ledgers with zero room for error."
+  },
+  "mission": {
+    "label": "Our Mission",
+    "title": "Your Success Is Our Success",
+    "lead": "Our goal is simple: meet client expectations, streamline daily workflows, and grow together as dependable long-term technical partners.",
+    "description": "We actively incorporate client feedback to engineer flexible reports and tailored features, turning complex gold market transactions into an intuitive, seamless experience."
+  }
+},
+"companyHq": {
+  "headquarters": "Headquarters",
+  "subtitle": "Specialized Enterprise Software & Solutions",
+  "mainOffice": "Main Office",
+  "address": "Ali Nassouh At-Taher St., Al Swaifyeh, Amman, Jordan",
+  "telephone": "Telephone",
+  "directMobileLines": "Direct Mobile Lines",
+  "email": "Email",
+  "action": "Schedule Consultation & Visit"
+}
+},
+"goldDX": {
+  "seo": {
+    "title": "22-Gold DX | Jewelry Management Software by 22-Soft",
+    "description": "22-Gold DX is jewelry management software designed for jewelry businesses, with inventory management, POS and invoicing, reporting, mobile operations, and RFID jewelry inventory tracking."
+  },
+  "hero": {
+  "label": "22-Gold DX Jewelry ERP",
+  "title": "Jewelry Inventory Software",
+  "highlight": "Built for Modern Jewelry Businesses",
+  "description": "Discover 22-Gold DX, a specialized jewelry ERP for inventory, sales, invoicing, reporting, mobile operations, and RFID inventory tracking.",
+  "requestDemo": "Request a Demo",
+  "watchDemo": "Watch Demo",
+  "exploreFeatures": "Explore Features"
+},
+"requestDemo": {
+  "form": {
+    "fullName": "Full Name",
+    "namePlaceholder": "Your name",
+    "email": "Email (Optional)",
+    "mobile": "Mobile / WhatsApp",
+    "message": "Message",
+    "messagePlaceholder": "Tell us what you would like to see in the demo...",
+    "sending": "Sending...",
+    "submit": "Request Your Demo",
+    "errors": {
+      "sendFailed": "Failed to send demo request. Please try again.",
+      "connection": "server is down or connection problem, Please try again. "
+    }
+  }
+},
+"features": {
+  "label": "22-Gold DX Features",
+  "title": "Everything You Need to Manage",
+  "highlight": "Your Jewelry Business",
+  "description": "Powerful tools designed to simplify daily jewelry operations, from inventory and sales to analytics and financial management.",
+  "items": {
+    "rfidInventory": {
+      "category": "RFID Inventory",
+      "title": "RFID Jewelry Inventory Tracking",
+      "description": "Speed up physical inventory counts with RFID technology integrated with 22-Gold DX. Using compatible Zebra RFID readers, your team can scan tagged jewelry items, instantly identify detected pieces, compare physical stock with system records, and reduce the time and manual effort required for inventory checks."
+    },
+    "mobileManagement": {
+      "category": "Mobile App",
+      "title": "Mobile Business Management",
+      "description": "Stay connected to your jewelry business even when you are away from the desktop. The 22-Gold DX mobile experience gives you convenient access to important sales, inventory, and business information from your mobile device. Review key activity, follow operational data, and keep important information within reach wherever your work takes you. This gives owners and managers greater flexibility while staying connected to the daily performance of their business."
+    },
+    "businessInsights": {
+      "category": "Market Analytics",
+      "title": "Sales & Business Insights",
+      "description": "Turn everyday business activity into information that is easier to understand and use. 22-Gold DX provides dashboards and reports that help you review sales activity, monitor business performance, and follow important operational information from one place. Instead of relying only on scattered records, management can get a clearer view of business activity and use that information to support faster and more informed decisions."
+    },
+    "posInvoicing": {
+      "category": "Fast POS & Invoicing",
+      "title": "Jewelry POS & Invoicing Software",
+      "description": "Simplify the sales process with a point-of-sale and invoicing experience built around jewelry retail operations. Handle daily transactions, create and manage sales invoices, access product information, and keep customer transactions organized within the same connected system. The streamlined workflow helps your team complete sales more efficiently while keeping important sales information available for reporting and business management."
+    },
+    "financialOverview": {
+      "category": "Financial Control",
+      "title": "Profit & Financial Overview",
+      "description": "Keep a clearer view of the financial performance of your jewelry business by bringing important financial information together with your daily operations. Review profit information, follow key financial figures, and access organized business data through clear dashboards and reports. This gives management better visibility into financial performance and makes it easier to understand how everyday sales and operations are contributing to the overall business."
+    },
+    "inventoryManagement": {
+      "category": "Precise Inventory",
+      "title": "Jewelry Inventory Management Software",
+      "description": "Gain better control over your jewelry inventory with a centralized system designed for daily stock operations. 22-Gold DX helps you organize jewelry items, monitor stock movements, maintain detailed item information, and keep inventory records connected across your business. With clearer visibility into available stock and ongoing movements, your team can manage inventory more efficiently, reduce manual work, and access the information they need when handling day-to-day jewelry operations."
+    },
+    "auditTrail": {
+      "category": "Security & Control",
+      "title": "Audit Trail & Financial Ledger",
+      "description": "Maintain greater visibility and control over important financial and operational records with organized transaction tracking. 22-Gold DX helps keep business activity documented and makes it easier to review transactions, financial records, and changes when needed. A clearer audit trail supports better accountability, simplifies the process of reviewing historical activity, and gives management a more structured view of how transactions move through the business."
+    }
+  }
+},"plans": {
+  "label": "Choose Your Plan",
+  "title": "A Plan for Every",
+  "highlight": " Jewelry Business",
+  "description": "Whether you operate a single store or manage multiple branches, choose the 22-Gold DX plan that fits your business needs.",
+  "mostPopular": "Most Popular",
+  "requestDemo": "Request Demo",
+  "bottomNote": "Not sure which plan fits your business? Request a demo and our team will help you find the right solution.",
+  "items": {
+    "starter": {
+      "name": "Starter",
+      "description": "Single store getting started",
+      "features": [
+        "Desktop ERP for one location",
+        "Sales & inventory modules",
+        "Standard reports",
+        "Email support"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "Growing multi-branch business",
+      "features": [
+        "Multi-branch management",
+        "Mobile companion app",
+        "Advanced analytics",
+        "Priority support & training"
+      ]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "description": "Full chain & custom needs",
+      "features": [
+        "RFID & custom integrations",
+        "Dedicated account manager",
+        "On-site training",
+        "Tailored deployment"
+      ]
+    }
+  }
+}
+}
+}

@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const capabilities = [
   {
-    title: "Mobile Showcase Catalog",
-    desc: "HD piece showcase with instant karat and ID lookups.",
+    translationKey: "mobileShowcaseCatalog",
   },
   {
-    title: "Mobile POS & Making Charges",
-    desc: "Scan QR codes and bill making fees on the go.",
+    translationKey: "mobilePOS",
   },
   {
-    title: "Instant Vault & Ledger Sync",
-    desc: "Real-time updates directly to desktop accounting.",
+    translationKey: "vaultLedgerSync",
   },
 ];
 
 export default function MobileCapabilities() {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       className="flex flex-col gap-6 "
@@ -29,11 +29,13 @@ export default function MobileCapabilities() {
       </span>
 
       <h2 className="text-2xl md:text-4xl font-bold text-[#18395b] tracking-tight leading-tight">
-        Run Your Jewelry Business{" "}
-        <span className="text-[#c94f00]">From Anywhere</span>
+        {t("home.mobileCapabilities.title")}{" "}
+        <span className="text-[#c94f00]">
+          {t("home.mobileCapabilities.highlight")}
+        </span>
       </h2>
 <p className="text-base leading-7 text-slate-600 max-w-xl">
-  Stay connected to 22-Gold DX beyond the desktop with mobile access to key business operations.
+  {t("home.mobileCapabilities.description")}
 </p>
       <div className="space-y-3 pt-1">
         {capabilities.map((item, idx) => (
@@ -45,16 +47,18 @@ export default function MobileCapabilities() {
               ✓
             </span>
             <div>
-              <h3 className="text-sm font-bold text-[#18395b] leading-none">
-                {item.title}
+              <h3 className="font-semibold text-[#18395b] text-sm md:text-base">
+                {t(`home.mobileCapabilities.items.${item.translationKey}.title`)}
               </h3>
-              <p className="text-xs text-slate-600 mt-1.5">{item.desc}</p>
+              <p className="text-xs md:text-sm text-slate-600 mt-0.5">
+                {t(`home.mobileCapabilities.items.${item.translationKey}.description`)}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2.5 pt-3 text-xs font-medium text-slate-600">
+      <div className="flex flex-wrap items-center gap-3 pt-2 text-xs">
         <a
           href="https://play.google.com/store/apps/details?id=com.soft_22App"
           target="_blank"
@@ -64,7 +68,7 @@ export default function MobileCapabilities() {
           <svg className="w-3.5 h-3.5 text-[#f97316]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          <span>Download Android</span>
+          <span>{t("home.mobileCapabilities.downloadAndroid")}</span>
         </a>
 
         <a
@@ -76,10 +80,12 @@ export default function MobileCapabilities() {
           <svg className="w-3.5 h-3.5 text-[#f97316]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
-          <span>Download iOS</span>
+          <span>{t("home.mobileCapabilities.downloadIOS")}</span>
         </a>
 
-        <span className="text-slate-600">• Offline Sync</span>
+        <span className="text-slate-600">
+          • {t("home.mobileCapabilities.offlineSync")}
+        </span>
       </div>
     </motion.div>
   );

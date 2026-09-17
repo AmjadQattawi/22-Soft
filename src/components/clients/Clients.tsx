@@ -1,8 +1,11 @@
 import SectionContainer from "../csscomponents/SectionContainer";
 import ClientsMap from "./clientsmap/ClientsMap";
 import ClientsSlider from "./ClientsSlider";
+import { useTranslation } from "react-i18next";
 
 export default function Clients() {
+  const { t } = useTranslation();
+
   return (
     <SectionContainer
       id="clients"
@@ -12,15 +15,15 @@ export default function Clients() {
       {/* Section header */}
       <div className="text-center max-w-3xl mx-auto">
         <span className="text-sm font-semibold uppercase tracking-widest text-[#B94700]">
-          TRUSTED PARTNERSHIPS
+          {t("home.clients.label")}
         </span>
 
         <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#18395b]">
-          Trusted by Jewelry Businesses
+          {t("home.clients.title")}
         </h2>
 
         <p className="mt-4 text-base leading-7 text-slate-600">
-          Discover some of the businesses that rely on 22-Soft solutions.
+          {t("home.clients.description")}
         </p>
       </div>
 

@@ -1,46 +1,30 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface TabData {
   id: string;
-  label: string;
-  title: string;
-  lead: string;
-  description: string;
+  translationKey: string;
 }
 
 const tabs: TabData[] = [
   {
     id: "story",
-    label: "Our Story",
-    title: "Rooted in Industry Practice & Software Engineering",
-    lead:
-      "22-Soft was founded by combining specialized software expertise with deep, hands-on field experience in retail and bullion markets. We develop dependable software built on solid technical standards to simplify complex operations with complete accuracy.",
-    description:
-      "Our systems evolve directly through customer feedback, ensuring complete confidentiality for sensitive vault accounts while our technical team provides continuous, attentive operational guidance.",
+    translationKey: "story",
   },
   {
     id: "vision",
-    label: "Our Vision",
-    title: "Pioneering the Digital Transformation of Jewelry Trade",
-    lead:
-      "We envision an effortless digital transition across gold workshops and retail counters, eliminating manual paperwork while keeping data integrity strictly intact.",
-    description:
-      "By leveraging modern technologies, we empower companies to achieve micro-gram precision across all karats, scrap melting, and multi-currency ledgers with zero room for error.",
+    translationKey: "vision",
   },
   {
     id: "mission",
-    label: "Our Mission",
-    title: "Your Success Is Our Success",
-    lead:
-      "Our goal is simple: meet client expectations, streamline daily workflows, and grow together as dependable long-term technical partners.",
-    description:
-      "We actively incorporate client feedback to engineer flexible reports and tailored features, turning complex gold market transactions into an intuitive, seamless experience.",
+    translationKey: "mission",
   },
 ];
 
 export default function AboutTabs() {
   const [activeTab, setActiveTab] = useState("story");
+  const { t } = useTranslation();
 
   const currentTab = tabs.find((tab) => tab.id === activeTab) || tabs[0];
 
@@ -62,7 +46,7 @@ export default function AboutTabs() {
                   : "text-slate-600 hover:text-[#18395b]"
               }`}
             >
-              {tab.label}
+              {t(`about.tabs.${tab.translationKey}.label`)}
 
               {isActive && (
                 <motion.div
@@ -86,15 +70,15 @@ export default function AboutTabs() {
           className="pt-7"
         >
           <h2 className="text-xl font-bold leading-snug text-[#18395b] md:text-2xl">
-            {currentTab.title}
+            {t(`about.tabs.${currentTab.translationKey}.title`)}
           </h2>
 
           <p className="mt-4 text-sm leading-7 text-slate-600 md:text-base">
-            {currentTab.lead}
+            {t(`about.tabs.${currentTab.translationKey}.lead`)}
           </p>
 
           <p className="mt-4 text-sm leading-7 text-slate-600 md:text-base">
-            {currentTab.description}
+            {t(`about.tabs.${currentTab.translationKey}.description`)}
           </p>
         </motion.div>
       </AnimatePresence>

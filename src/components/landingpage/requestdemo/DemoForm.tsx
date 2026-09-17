@@ -6,6 +6,7 @@ import {
 import { initialFormData, type DemoFormData } from "./demoFormData";
 
 import { countries } from "./demoCountries";
+import { useTranslation } from "react-i18next";
 
 interface DemoFormProps {
   submitted: boolean;
@@ -13,6 +14,8 @@ interface DemoFormProps {
 }
 
 export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState<DemoFormData>(() => {
     const savedData = localStorage.getItem("formData");
     if (savedData) {
@@ -82,14 +85,14 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
       } else {
         // If the server responded but the operation failed يعني الرد ما وصل
         setSubmitError(
-          result.message || "Failed to send demo request. Please try again.",
+          result.message || t("goldDX.requestDemo.form.errors.sendFailed"),
         );
       }
     } catch (error) {
       // Error such as server is down or connection problem
       console.error("Demo request failed:", error);
       setSubmitError(
-        "server is down or connection problem, Please try again. ",
+        t("goldDX.requestDemo.form.errors.connection"),
       );
     } finally {
       setIsLoading(false);
@@ -108,13 +111,13 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
         {/* Full Name */}
         <div>
           <label className="mb-2 block text-sm font-semibold text-[#18395b]">
-            Full Name
+            {t("goldDX.requestDemo.form.fullName")}
           </label>
 
           <input
             required
             type="text"
-            placeholder="Your name"
+            placeholder={t("goldDX.requestDemo.form.namePlaceholder")}
             value={formData.fullName}
             onChange={(e) =>
               setFormData({
@@ -135,7 +138,7 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
         {/* Email */}
         <div>
           <label className="mb-2 block text-sm font-semibold text-[#18395b]">
-            Email (Optional)
+            {t("goldDX.requestDemo.form.email")}
           </label>
           <input
             type="email"
@@ -161,7 +164,7 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
       {/* Phone */}
       <div>
         <label className="mb-2 block text-sm font-semibold text-[#18395b]">
-          Mobile / WhatsApp
+          {t("goldDX.requestDemo.form.mobile")}
         </label>
 
         <div className="flex overflow-hidden rounded-xl border border-slate-300 bg-white transition focus-within:border-[#f97316] focus-within:ring-2 focus-within:ring-orange-100">
@@ -212,12 +215,12 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
       {/* Message */}
       <div>
         <label className="mb-2 block text-sm font-semibold text-[#18395b]">
-          Message
+          {t("goldDX.requestDemo.form.message")}
         </label>
 
         <textarea
           rows={4}
-          placeholder="Tell us what you would like to see in the demo..."
+          placeholder={t("goldDX.requestDemo.form.messagePlaceholder")}
           value={formData.message}
           onChange={(e) =>
             setFormData({
@@ -235,7 +238,9 @@ export default function DemoForm({ submitted, setSubmitted }: DemoFormProps) {
         disabled={isLoading}
         className="mt-2 w-full rounded-xl bg-[#c2410c] px-7 py-3.5 font-semibold text-white shadow-lg shadow-orange-500/15 transition hover:-translate-y-0.5 hover:bg-[#ea580c] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
-        {isLoading ? "Sending..." : "Request Your Demo"}
+        {isLoading
+          ? t("goldDX.requestDemo.form.sending")
+          : t("goldDX.requestDemo.form.submit")}
       </button>
 
       {/* Error */}

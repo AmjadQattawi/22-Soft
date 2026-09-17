@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import SectionContainer from "../csscomponents/SectionContainer";
+import { useTranslation } from "react-i18next";
 
 import rfidReader from "../../assets/landing page/rfid_item_locator.png";
 import rfidSmartInventory from "../../assets/landing page/rfid/rfid_smart_inventory.jpeg";
 
 export default function RFIDSection() {
+  const { t } = useTranslation();
+
   return (
     <SectionContainer id="rfid" className="bg-white">
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -52,44 +55,47 @@ export default function RFIDSection() {
         {/* Content */}
         <div>
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#c94f00] md:text-sm">
-            RFID Jewelry Technology
+            {t("home.rfid.label")}
           </span>
 
           <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-[#18395b] md:text-4xl">
-            Smarter Inventory
-            <span className="block text-[#c94f00]">Powered by RFID</span>
+            {t("home.rfid.title")}
+            <span className="block text-[#c94f00]">
+              {t("home.rfid.highlight")}
+            </span>
           </h2>
 
           <p className="mt-5 max-w-xl leading-7 text-slate-600">
-            Speed up jewelry inventory checks with RFID technology integrated
-            with 22-Gold DX. Locate tagged items, identify jewelry instantly,
-            and keep physical stock connected with your system.
+            {t("home.rfid.description")}
           </p>
 
           {/* Benefits */}
           <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <h3 className="font-semibold text-[#18395b]">Faster Inventory</h3>
+              <h3 className="font-semibold text-[#18395b]">
+                {t("home.rfid.benefits.fasterInventory.title")}
+              </h3>
               <p className="mt-1 text-sm text-slate-600">
-                Scan multiple tagged items efficiently.
+                {t("home.rfid.benefits.fasterInventory.description")}
               </p>
             </div>
 
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <h3 className="font-semibold text-[#18395b]">Item Locator</h3>
+              <h3 className="font-semibold text-[#18395b]">
+                {t("home.rfid.benefits.itemLocator.title")}
+              </h3>
               <p className="mt-1 text-sm text-slate-600">
-                Quickly locate specific jewelry pieces.
+                {t("home.rfid.benefits.itemLocator.description")}
               </p>
             </div>
           </div>
 
-          {/* CTA */}
           <div className="mt-7">
             <Link
-              to="/22-gold-dx"
-              className="inline-flex items-center justify-center rounded-xl bg-[#c2410c] px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#ea580c]"
+              to="/22-gold-dx#rfid"
+              className="inline-flex items-center justify-center rounded-xl bg-[#c94f00] px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#ea580c]"
             >
-              Explore RFID Solutions
+              {t("home.rfid.button")}
             </Link>
           </div>
         </div>

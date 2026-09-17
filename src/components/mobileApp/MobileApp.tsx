@@ -1,4 +1,4 @@
-import SectionContainer from "../csscomponents/SectionContainer"
+import SectionContainer from "../csscomponents/SectionContainer";
 import MobileCapabilities from "./MobileCapabilities";
 import MobileMockupShowcase from "./MobileMockupShowcase";
 
